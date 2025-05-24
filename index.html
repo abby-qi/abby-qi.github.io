@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>最忆是江南</title>
-  <style>
+    <style>
     * {
       margin: 0;
       padding: 0;
@@ -13,8 +13,9 @@
     }
     body {
       line-height: 1.6;
-      color: #333;
-      background-color: #f5f7fa;
+      color: #4a4238; /* 深褐色文本 */
+      background-color: #f8f5f0; /* 米白色背景 */
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmNWYzZWUiPjwvcmVjdD4KPC9zdmc+'); /* 轻微的纹理 */
     }
     .container {
       max-width: 1200px;
@@ -23,8 +24,8 @@
     }
     /* 顶部导航优化 */
     .header {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: rgba(242, 237, 228, 0.9); /* 米黄色半透明背景 */
+      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); /* 褐色阴影 */
       position: sticky;
       top: 0;
       z-index: 100;
@@ -34,9 +35,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #e6dfd4; /* 浅褐色边框 */
       font-size: 0.9em;
-      color: #666;
+      color: #736357; /* 灰褐色文本 */
     }
     .header-main {
       display: flex;
@@ -54,17 +55,18 @@
     }
     .search input {
       padding: 8px 12px;
-      border: 1px solid #ddd;
+      border: 1px solid #d9ccb8; /* 浅褐色边框 */
       border-radius: 4px;
       width: 300px;
       transition: border-color 0.3s;
+      background-color: rgba(255, 255, 255, 0.8); /* 半透明白色 */
     }
     .search input:focus {
-      border-color: #035294;
+      border-color: #a67c52; /* 赭石色焦点边框 */
       outline: none;
     }
     .search button {
-      background: #035294;
+      background: #a67c52; /* 赭石色按钮 */
       color: white;
       border: none;
       padding: 8px 15px;
@@ -72,7 +74,7 @@
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 5px; /* 预留图标空间（如果有的话） */
+      gap: 5px;
     }
     .main-nav ul {
       display: flex;
@@ -83,12 +85,12 @@
     }
     .main-nav a {
       text-decoration: none;
-      color: #333;
+      color: #4a4238; /* 深褐色文本 */
       font-weight: bold;
       position: relative;
     }
     .main-nav a:hover {
-      color: #035294;
+      color: #a67c52; /* 赭石色悬停 */
     }
     .main-nav a::after {
       content: '';
@@ -97,19 +99,19 @@
       left: 50%;
       width: 0;
       height: 2px;
-      background: #035294;
+      background: #a67c52; /* 赭石色下划线 */
       transition: width 0.3s, left 0.3s;
     }
     .main-nav a:hover::after {
       width: 100%;
       left: 0;
     }
- /* 横幅图片*/
- .banner {
+    /* 横幅图片*/
+    .banner {
       height: 400px;
       margin: 30px 0;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(128, 115, 97, 0.2); /* 褐色阴影 */
       overflow: hidden;
     }
     .banner img {
@@ -120,19 +122,19 @@
 
     /* 新闻列表优化 */
     .news-section {
-      background: #fff;
+      background: rgba(255, 253, 249, 0.9); /* 米白色半透明背景 */
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); /* 褐色阴影 */
       padding: 20px;
       margin-bottom: 30px;
     }
     .section-header {
-      font-size: 1.125rem; /* 18px */
+      font-size: 1.125rem;
       font-weight: bold;
       margin-bottom: 15px;
-      color: #035294;
-      border-bottom: 2px solid #035294;
-      display: inline-block; /* 让下划线仅在文字下方 */
+      color: #8c6239; /* 深赭石色标题 */
+      border-bottom: 2px solid #8c6239; /* 深赭石色下划线 */
+      display: inline-block;
       padding-bottom: 5px;
     }
     .news-list {
@@ -140,39 +142,40 @@
     }
     .news-list li {
       padding: 15px 0;
-      border-bottom: 1px dashed #eee; /* 虚线分隔 */
+      border-bottom: 1px dashed #e6dfd4; /* 浅褐色虚线分隔 */
     }
     .news-list a {
       text-decoration: none;
-      color: #333;
+      color: #4a4238; /* 深褐色文本 */
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 0.95rem;
     }
     .news-list a:hover {
-      color: #035294;
+      color: #a67c52; /* 赭石色悬停 */
     }
     .news-date {
-      color: #666;
+      color: #736357; /* 灰褐色日期 */
       font-size: 0.9rem;
     }
     /* 服务卡片响应式 */
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 最小200px，自动填充 */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
     .service-card {
-      background: #fff;
+      background: rgba(255, 253, 249, 0.9); /* 米白色半透明背景 */
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(128, 115, 97, 0.15); /* 褐色阴影 */
       overflow: hidden;
       transition: transform 0.3s ease;
     }
     .service-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(128, 115, 97, 0.25); /* 加深阴影 */
     }
     .service-card img {
       width: 100%;
@@ -184,12 +187,13 @@
       text-align: center;
       font-weight: bold;
       font-size: 1rem;
+      color: #4a4238; /* 深褐色标题 */
     }
 
     /* 页脚优化 */
     .footer {
-      background: #035294;
-      color: #fff;
+      background: rgba(74, 66, 56, 0.9); /* 深褐色半透明背景 */
+      color: #f8f5f0; /* 米白色文本 */
       padding: 40px 0;
       margin-top: 50px;
       text-align: center;
@@ -198,7 +202,7 @@
       margin-bottom: 20px;
     }
     .footer-links a {
-      color: #fff;
+      color: #f8f5f0; /* 米白色文本 */
       margin: 0 15px;
       text-decoration: none;
       font-size: 0.95rem;
@@ -206,11 +210,12 @@
     }
     .footer-links a:hover {
       text-decoration: underline;
+      color: #e6dfd4; /* 浅米白色悬停 */
     }
     .copyright {
       font-size: 0.9rem;
       line-height: 1.8;
-      color: #f5f7fa;
+      color: #e6dfd4; /* 浅米白色文本 */
       opacity: 0.9;
     }    
     .flex { display: flex; }
@@ -223,92 +228,91 @@
   </style>
 </head>
 <body>
-<!-- 顶部导航栏 -->
-<header class="header">
-  <div class="container">
-    <!-- 顶部信息栏（横向排列） -->
-    <div class="header-top flex justify-between items-center">
-      <div class="welcome">纽约市第一人民医院网站欢迎您的访问！</div>
-      <div class="flex items-center gap-4">
-        <div class="date">2025年5月10日 星期六</div>
-        <div class="header-links flex items-center gap-4">
-          <a href="01nyyy/无障碍访问政策.html" aria-label="无障碍访问">无障碍</a>
-          <a href="01nyyy/反歧视政策.html" aria-label="反歧视政策">反歧视</a>
-          <div class="audio-container">
-            <p class="text-sm">点击播放纽约市歌《欢迎来到新乡》</p>                
-            <audio controls style="width: 200px;">
-              <source src="01nyyy/Welcome_To_New_York.aac" type="audio/aac">
-            </audio>
-          </div>
+  <!-- 顶部导航栏 -->
+  <header class="header">
+    <div class="container">
+      <!-- 顶部信息栏（横向排列） -->
+      <div class="header-top flex justify-between items-center">
+        <div class="welcome">欢迎来到最忆江南的世界！</div>
+        <div class="flex items-center gap-4">
+          <div class="date">2025年5月10日 星期六</div>
+          <div class="header-links flex items-center gap-4">
+            <a href="#" aria-label="无障碍访问">无障碍</a>
+            <a href="#" aria-label="反歧视政策">反歧视</a>
+            <div class="audio-container">
+              <p class="text-sm">点击播放江南古韵之音</p>                
+              <audio controls style="width: 200px;">
+                <source src="01nyyy/Welcome_To_New_York.aac" type="audio/mp3">
+              </audio>
+            </div>
+          </div> 
+        </div> 
+      </div>
+      <!-- 主体导航区（横向布局） -->
+      <div class="header-main flex justify-between items-center py-4">
+        <div class="logo">
+          <img src="#" alt="最忆江南" height="60">
         </div>
+        <form action="https://www.baidu.com/s" method="get">
+          <div class="search flex items-center gap-2">
+            <input 
+              type="text" 
+              name="wd" 
+              placeholder="探寻江南的美景与故事" 
+              aria-label="搜索框" 
+              class="border rounded p-2"
+              required  
+              <!-- 添加required属性，确保用户必须输入内容 -->
+            >
+            <button 
+              type="submit" 
+              aria-label="搜索按钮" 
+              class="bg-gray-200 p-2 rounded"
+            >
+              搜索
+            </button>
+          </div>
+        </form>
       </div>
+      <!-- 主导航菜单（横向排列） -->
+      <nav class="main-nav">
+        <ul class="flex gap-8 justify-center">
+          <li><a href="#">江南要闻</a></li>
+          <li><a href="#">江南风情</a></li>
+          <li><a href="#">江南美食</a></li>
+          <li><a href="#">江南住宿</a></li> 
+          <li><a href="#">互动交流</a></li>
+        </ul>
+      </nav>
     </div>
-    <!-- 主体导航区（横向布局） -->
-    <div class="header-main flex justify-between items-center py-4">
-      <div class="logo">
-        <img src="01nyyy/医院标志.png" alt="纽约市第一人民医院" height="60">
-      </div>
-<form action="https://www.baidu.com/s" method="get">
-  <div class="search flex items-center gap-2">
-    <input 
-      type="text" 
-      name="wd" 
-      placeholder="如何处理轻微的枪伤？" 
-      aria-label="搜索框" 
-      class="border rounded p-2"
-      required  
-      <!-- 添加required属性，确保用户必须输入内容 -->
-      >
-    <button 
-      type="submit" 
-      aria-label="搜索按钮" 
-      class="bg-gray-200 p-2 rounded"
-      >
-      搜索
-    </button>
-  </div>
-</form>
-      </div>
-    </div>
-    <!-- 主导航菜单（横向排列） -->
-    <nav class="main-nav">
-      <ul class="flex gap-8 justify-center">
-        <li><a href="01nyyy/一院要闻.html">一院要闻</a></li>
-        <li><a href="01nyyy/一院公开.html">一院公开</a></li>
-        <li><a href="01nyyy/一院服务.html">一院服务</a></li>
-        <li><a href="01nyyy/互动交流.html">魅力一院</a></li> 
-        <li><a href="01nyyy/互动交流.html">互动交流</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
   <!-- 主要内容区 -->
   <main class="container">
     <!-- 横幅图片 -->
     <div class="banner">
-      <a href="01nyyy/急诊中心介绍.html">
-      <img src="01nyyy/医院急诊中心.png" alt="纽约市第一人民医院急诊中心">
+      <a href="#">
+        <img src="#" alt="江南风景">
       </a>
     </div>
     <!-- 新闻列表 -->
     <div class="news-section">
-      <h2 class="section-header">今日要闻</h2>
+      <h2 class="section-header">今日江南</h2>
       <ul class="news-list">
         <li>
-          <a href="01nyyy/我院成功完成首例机器人辅助枪伤修复手术.html">
-            <span class="news-title">我院成功完成首例机器人辅助枪伤修复手术</span>
+          <a href="#">
+            <span class="news-title">江南古镇举办特色民俗活动</span>
             <time class="news-date" datetime="2025-05-10">2025-05-10</time>
           </a>
         </li>
         <li>
-          <a href="01nyyy/急诊中心新增24小时枪伤处理绿色通道.html">
-            <span class="news-title">急诊中心新增24小时枪伤处理绿色通道</span>
+          <a href="#">
+            <span class="news-title">江南美食节即将开幕</span>
             <time class="news-date" datetime="2025-05-09">2025-05-09</time>
           </a>
         </li>
         <li>
-          <a href="01nyyy/公共卫生科发布《枪伤预防与急救指南》.html">
-            <span class="news-title">公共卫生科发布《枪伤预防与急救指南》</span>
+          <a href="#">
+            <span class="news-title">江南水乡新景点开放</span>
             <time class="news-date" datetime="2025-05-08">2025-05-08</time>
           </a>
         </li>
@@ -316,17 +320,17 @@
     </div>
     <!-- 服务卡片 -->
     <div class="services">
-      <a href="01nyyy/枪伤服务.html" class="service-card">
-        <img src="01nyyy/枪伤服务.png" alt="枪伤服务">
-        <div class="service-title">枪伤急诊服务</div>
+      <a href="#" class="service-card">
+        <img src="#" alt="江南旅游服务">
+        <div class="service-title">江南旅游服务</div>
       </a>
-      <a href="01nyyy/美式截停后服务.html" class="service-card">
-        <img src="01nyyy/美式截停后服务.png" alt="美式截停后服务">
-        <div class="service-title">美式截停后服务</div>
+      <a href="#" class="service-card">
+        <img src="#" alt="江南美食推荐">
+        <div class="service-title">江南美食推荐</div>
       </a>
-      <a href="01nyyy/误服消毒水.html" class="service-card">
-        <img src="01nyyy/误服消毒水.png" alt="误服消毒水">
-        <div class="service-title">误服消毒水</div>
+      <a href="#" class="service-card">
+        <img src="#" alt="江南住宿预订">
+        <div class="service-title">江南住宿预订</div>
       </a>
     </div>
   </main>
@@ -334,14 +338,14 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
-        <a href="01nyyy/医疗团队及就医指南.html">医疗团队及就医指南</a>
-        <a href="01nyyy/隐私及合规性承诺.html">隐私及合规性承诺</a>
-        <a href="01nyyy/患者的权利与义务.html">患者的权利及义务</a>
+        <a href="#">关于江南之旅</a>
+        <a href="#">隐私及合规性承诺</a>
+        <a href="#">游客的权利与义务</a>
       </div>
       <div class="copyright">
-        <p>主办单位：纽约市第一人民医院、纽约市人民政府</p>
-        <p>地址：纽约市第八大道第八路75号</p>
-        <p>备案号：ny01yy20250510号</p>
+        <p>主办单位：最忆江南网站管理团队</p>
+        <p>地址：虚拟的江南之地</p>
+        <p>备案号：jyjn20250510号</p>
       </div>
     </div>
   </footer>
