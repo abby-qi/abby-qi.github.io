@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>最忆是江南</title>
+  <!-- 感谢豆包女士对CSS提出的美化建议 -->
     <style>
     * {
       margin: 0;
@@ -26,8 +27,6 @@
     .header {
       background-color: rgba(242, 237, 228, 0.9); /* 米黄色半透明背景 */
       box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); /* 褐色阴影 */
-      position: sticky;
-      top: 0;
       z-index: 100;
     }
     .header-top {
@@ -227,6 +226,7 @@
     .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
   </style>
 </head>
+    <!-- 感谢红谷滩区政府为网页骨架搭建提供的灵感 -->
 <body>
   <!-- 顶部导航栏 -->
   <header class="header">
@@ -235,14 +235,14 @@
       <div class="header-top flex justify-between items-center">
         <div class="welcome">欢迎来到最忆江南的世界！</div>
         <div class="flex items-center gap-4">
-          <div class="date">2025年5月10日 星期六</div>
+          <div class="date">#</div>
           <div class="header-links flex items-center gap-4">
             <a href="#" aria-label="无障碍访问">无障碍</a>
             <a href="#" aria-label="反歧视政策">反歧视</a>
             <div class="audio-container">
               <p class="text-sm">点击播放江南古韵之音</p>                
               <audio controls style="width: 200px;">
-                <source src="01nyyy/Welcome_To_New_York.aac" type="audio/mp3">
+                <source src="01zyjn/Welcome_To_New_York.aac" type="audio/mp3">
               </audio>
             </div>
           </div> 
@@ -251,7 +251,7 @@
       <!-- 主体导航区（横向布局） -->
       <div class="header-main flex justify-between items-center py-4">
         <div class="logo">
-          <img src="#" alt="最忆江南" height="60">
+          <img src="01zyjn/最忆江南标志.png" alt="最忆江南" height="60">
         </div>
         <form action="https://www.baidu.com/s" method="get">
           <div class="search flex items-center gap-2">
@@ -277,7 +277,7 @@
       <!-- 主导航菜单（横向排列） -->
       <nav class="main-nav">
         <ul class="flex gap-8 justify-center">
-          <li><a href="#">江南要闻</a></li>
+          <li><a href="01zyjn/江南要闻.html">江南要闻</a></li>
           <li><a href="#">江南风情</a></li>
           <li><a href="#">江南美食</a></li>
           <li><a href="#">江南住宿</a></li> 
@@ -291,7 +291,7 @@
     <!-- 横幅图片 -->
     <div class="banner">
       <a href="#">
-        <img src="#" alt="江南风景">
+        <img src="01zyjn/江南风景.png" alt="江南风景">
       </a>
     </div>
     <!-- 新闻列表 -->
@@ -299,19 +299,19 @@
       <h2 class="section-header">今日江南</h2>
       <ul class="news-list">
         <li>
-          <a href="#">
+          <a href="01zyjn/江南古镇举办特色民俗活动.html">
             <span class="news-title">江南古镇举办特色民俗活动</span>
             <time class="news-date" datetime="2025-05-10">2025-05-10</time>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="01zyjn/江南美食节即将开幕.html">
             <span class="news-title">江南美食节即将开幕</span>
             <time class="news-date" datetime="2025-05-09">2025-05-09</time>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="01zyjn/江南水乡新景点开放.html">
             <span class="news-title">江南水乡新景点开放</span>
             <time class="news-date" datetime="2025-05-08">2025-05-08</time>
           </a>
@@ -321,15 +321,15 @@
     <!-- 服务卡片 -->
     <div class="services">
       <a href="#" class="service-card">
-        <img src="#" alt="江南旅游服务">
+        <img src="01zyjn/江南旅游服务.png" alt="江南旅游服务">
         <div class="service-title">江南旅游服务</div>
       </a>
       <a href="#" class="service-card">
-        <img src="#" alt="江南美食推荐">
+        <img src="01zyjn/江南美食推荐.png" alt="江南美食推荐">
         <div class="service-title">江南美食推荐</div>
       </a>
       <a href="#" class="service-card">
-        <img src="#" alt="江南住宿预订">
+        <img src="01zyjn/江南住宿预订.png" alt="江南住宿预订">
         <div class="service-title">江南住宿预订</div>
       </a>
     </div>
@@ -349,5 +349,24 @@
       </div>
     </div>
   </footer>
+  <!-- 感谢克劳德先生对本站所有JS内容的技术支持 -->
+  <script>
+  function getWeekdayName(day) {
+    const weekdays = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    return weekdays[day];
+  }
+  function updateDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const date = now.getDate();
+    const weekday = getWeekdayName(now.getDay());
+    document.querySelector('.date').textContent = 
+      `${year}年${month}月${date}日 ${weekday}`;
+  }
+  updateDate();
+  // 可选：每分钟自动更新时间
+  setInterval(updateDate, 60000);
+</script>
 </body>
 </html>
