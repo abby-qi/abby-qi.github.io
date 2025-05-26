@@ -3,36 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <title>江南美食节即将开幕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f5f0;
+            color: #4a4238;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 820px;
+            margin: 40px auto;
+            padding: 36px 24px 44px 24px;
+            background: #fffdfa;
+            box-shadow: 0 4px 24px rgba(140, 98, 57, 0.10);
+            border-radius: 18px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 18px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #e6dfd4;
         }
         h1 {
-            text-align: center;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            color: #8c6239;
+            font-size: 2.3em;
+            letter-spacing: 3px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
         }
         .date {
-            font-size: 0.9em;
-            color: #666;
+            font-size: 1em;
+            color: #a67c52;
             text-align: right;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
-        p {
-            margin: 15px 0;
+        .desc {
+            text-align: center;
+            color: #a67c52;
+            font-size: 1.15em;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        .festival-section {
+            margin-bottom: 28px;
+        }
+        .highlight {
+            background: linear-gradient(90deg, #f8f5f0 60%, #e6dfd4 100%);
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin: 28px 0;
+            color: #8c6239;
+            font-size: 1.07em;
+            text-align: center;
+        }
+        ul {
+            margin: 18px 0 18px 2em;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            font-size: 1.06em;
+            position: relative;
+            padding-left: 1em;
+        }
+        li::before {
+            content: "•";
+            color: #a67c52;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+        .tips {
+            background: #f8f5f0;
+            border-left: 4px solid #a67c52;
+            padding: 14px 18px;
+            margin: 32px 0 0 0;
+            color: #a67c52;
+            font-size: 1em;
+            border-radius: 6px;
+        }
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid #e6dfd4;
+            padding-top: 16px;
+            font-size: 0.98em;
+            color: #a67c52;
+            text-align: center;
+            background: #f8f5f0;
+            border-radius: 0 0 18px 18px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 14px 2vw 24px 2vw;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            .desc {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>江南美食节即将开幕</h1>
-    <p class="date">2025年5月9日 江南</p>
-    江南美食节即将开幕<br>
-    等编出来再说<br>
+    <div class="container">
+        <header>
+            <h1>江南美食节即将开幕</h1>
+            <div class="desc">汇聚江南风味，开启味蕾盛宴</div>
+        </header>
+        <div class="date">2025年5月9日 江南</div>
+        <div class="highlight">
+            期待已久的江南美食节将于本月下旬盛大开幕！届时，来自江南各地的传统名菜、小吃、甜品和创新料理将齐聚一堂，为市民和游客带来一场独特的美食盛宴。
+        </div>
+        <section class="festival-section">
+            <h2 style="color:#a67c52;font-size:1.18em;margin-bottom:12px;">活动亮点</h2>
+            <ul>
+                <li>百余种江南地道美食现场展售，涵盖苏州、杭州、无锡、绍兴等地特色。</li>
+                <li>名厨现场烹饪表演，传授江南经典菜肴制作技艺。</li>
+                <li>互动体验区，游客可参与包粽子、做糖画等传统手工活动。</li>
+                <li>美食文化讲座，深入了解江南饮食背后的历史与故事。</li>
+                <li>亲子趣味活动、民乐表演、汉服巡游等丰富配套活动。</li>
+            </ul>
+        </section>
+        <section class="festival-section">
+            <h2 style="color:#a67c52;font-size:1.18em;margin-bottom:12px;">时间与地点</h2>
+            <ul>
+                <li>时间：2025年5月25日-5月31日，每日10:00-21:00</li>
+                <li>地点：江南文化广场（主会场）及各大古镇分会场</li>
+            </ul>
+        </section>
+        <section class="festival-section">
+            <h2 style="color:#a67c52;font-size:1.18em;margin-bottom:12px;">温馨提示</h2>
+            <ul>
+                <li>建议提前规划行程，错峰参观，注意饮食卫生。</li>
+                <li>部分活动需预约，详情请关注官方公告。</li>
+                <li>文明参展，尊重摊主与他人，爱护环境。</li>
+            </ul>
+        </section>
+        <div class="tips">
+            <strong>美食节期间，欢迎广大市民和游客前来品味江南，感受水乡美食文化的独特魅力！</strong>
+        </div>
+        <footer>
+            &copy; 2025 江南之旅 | 江南美食节即将开幕
+        </footer>
+    </div>
 </body>
 </html>
