@@ -1,57 +1,90 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>反歧视政策</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background-color: #f8f5f0;
+            color: #4a4238;
             margin: 0;
             padding: 0;
-            color: #333;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 820px;
+            margin: 40px auto;
+            padding: 32px 20px 40px 20px;
+            background: #fffdfa;
+            box-shadow: 0 2px 12px rgba(140, 98, 57, 0.08);
+            border-radius: 14px;
         }
         header {
             text-align: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
+            padding-bottom: 18px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #e6dfd4;
         }
         h1 {
-            color: #005494;
+            color: #8c6239;
+            font-size: 2.2em;
+            letter-spacing: 3px;
+            margin: 0 0 10px 0;
         }
-        .policy-section {
-            margin-bottom: 20px;
+        h2, h3 {
+            color: #a67c52;
+            margin-top: 32px;
+            margin-bottom: 12px;
         }
         h2 {
-            color: #005494;
-            font-size: 18px;
+            font-size: 1.3em;
+        }
+        h3 {
+            font-size: 1.1em;
+        }
+        .policy-section {
+            margin-bottom: 28px;
         }
         .content {
-            margin-left: 2em;
+            margin-left: 1.5em;
         }
         .content ul {
-            padding-left: 1em;
+            padding-left: 1.2em;
         }
         .content li {
             margin-bottom: 8px;
         }
-        .footer {
-            margin-top: 30px;
+        .tips {
+            background: #f8f5f0;
+            border-left: 4px solid #a67c52;
+            padding: 14px 18px;
+            margin: 32px 0 0 0;
+            color: #a67c52;
+            font-size: 1em;
+            border-radius: 6px;
+        }
+        footer {
+            margin-top: 40px;
+            border-top: 1px solid #e6dfd4;
+            padding-top: 16px;
+            font-size: 0.95em;
+            color: #a67c52;
             text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid #ddd;
-            color: #666;
+            background: #f8f5f0;
         }
         .disclaimer {
             color: #999;
             font-size: 14px;
             margin-top: 15px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 2vw 24px 2vw;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
         }
     </style>
 </head>
@@ -59,60 +92,55 @@
     <div class="container">
         <header>
             <h1>反歧视政策</h1>
+            <div style="color:#a67c52;font-size:1.1em;margin-top:8px;">
+                致力于打造包容、公平的数字江南
+            </div>
         </header>
         <main>
-            <h2>纽约市第一人民网站</h2>
             <div class="policy-section">
-                <h3>政策目的</h3>
-                <p>本政策旨在确保纽约市第一人民网站（以下简称“本网站”）为所有用户提供了一个无差别、无偏见的数字服务体验。政策严格遵循虚构的《数字公平法案》（2024年修订版）及《NYC Digital Equality Code v2.0》，致力于消除基于种族、性别、宗教、性取向、年龄、残疾、数字素养等维度的歧视，构建包容性数字生态。</p>
+                <h2>政策目的</h2>
+                <p>本政策旨在确保本网站为所有用户提供无差别、无偏见的数字服务体验。我们严格遵循相关法律法规，致力于消除基于种族、性别、宗教、性取向、年龄、残疾、数字素养等维度的歧视，构建包容性数字生态。</p>
             </div>
-
             <div class="policy-section">
-                <h3>适用范围</h3>
-                <p>本政策适用于本网站所有用户（包括访客、注册用户及合作伙伴），覆盖信息发布、在线服务、互动社区等全场景。无论用户使用何种设备（如量子终端、全息投影设备）或技术背景（如传统互联网用户、脑机接口使用者），均享有平等访问权利。</p>
+                <h2>适用范围</h2>
+                <p>本政策适用于所有用户（包括访客、注册用户及合作伙伴），覆盖信息发布、在线服务、互动社区等全场景。无论用户使用何种设备或技术背景，均享有平等访问权利。</p>
             </div>
-
             <div class="policy-section">
-                <h3>核心反歧视原则与技术措施</h3>
+                <h2>核心反歧视原则与技术措施</h2>
                 <div class="content">
-                    <h4>禁止歧视类别</h4>
-                    <p>本网站严禁基于以下虚构特征的歧视行为：</p>
+                    <h3>禁止歧视类别</h3>
+                    <p>本网站严禁基于以下特征的歧视行为：</p>
                     <ul>
-                        <li>生物特征：基因序列、虹膜颜色、脑电波模式（依据《基因信息非歧视法》）。</li>
-                        <li>数字身份：区块链地址等级、元宇宙公民ID类型（如“创世居民”“移民居民”）。</li>
-                        <li>认知能力：通过“神经智能评估系统”判定的学习风格差异。</li>
+                        <li>生物特征：如基因、外貌、健康状况等。</li>
+                        <li>数字身份：如网络身份、账号类型等。</li>
+                        <li>认知能力：如学习风格、信息获取方式等。</li>
+                        <li>其他：包括但不限于种族、性别、年龄、宗教、残疾等。</li>
                     </ul>
-
-                    <h4>技术防控体系</h4>
-                    <p>本网站采用“FairCheck AI系统”，实现：</p>
+                    <h3>技术防控体系</h3>
+                    <p>本网站采用智能内容审核与算法公平性检测，主要措施包括：</p>
                     <ul>
-                        <li>内容过滤：实时扫描文本、图像及音视频，自动拦截含歧视性隐喻的表述（如“数字原住民”与“数字移民”的不当对比）。</li>
-                        <li>算法审计：每季度对推荐算法进行“偏见指数检测”，确保搜索结果、广告投放等无群体偏差。</li>
-                        <li>多模态适配：提供“文化中性”界面模板，用户可通过快捷键“Ctrl+Shift+Z”切换至无符号化交互模式。</li>
+                        <li>内容过滤：实时扫描文本、图片、音视频，自动拦截含歧视性内容。</li>
+                        <li>算法审计：定期检测推荐算法，确保无群体偏见。</li>
+                        <li>多模态适配：为用户提供文化中性的界面模板，支持无障碍访问。</li>
                     </ul>
-
-                    <h4>动态优化机制</h4>
-                    <p>引入“社会情绪监测网络”，实时抓取全球200+社群的舆情数据，每小时更新《数字歧视风险图谱》，自动调整内容审核规则。</p>
+                    <h3>动态优化机制</h3>
+                    <p>我们持续关注用户反馈和社会舆情，定期优化内容审核规则，提升反歧视能力。</p>
                 </div>
             </div>
-
             <div class="policy-section">
-                <h3>用户权益与反馈渠道</h3>
+                <h2>用户权益与反馈渠道</h2>
                 <div class="content">
-                    <p>所有投诉将由的“反歧视响应联盟”在5个工作日内处理。复杂案件将移交“宇宙数字公平委员会”仲裁，仲裁结果通过“数字公证链”同步至全宇宙区块链节点。</p>
+                    <p>如遇到歧视性内容或服务，可通过网站“意见反馈”渠道投诉。我们承诺在5个工作日内处理，复杂情况将移交第三方仲裁机构。</p>
                 </div>
             </div>
-
-            <div class="policy-section">
-                <h3>免责声明</h3>
-                <p>本政策为基于宇宙，不代表任何地球机构的实际政策。文中提及的法律、技术工具及机构名称（如“数字美元”“神经智能评估系统”）均为宇宙政策，请勿与地球中的法律、产品或服务混淆。</p>
+            <div class="tips">
+                <strong>温馨提示：</strong> 本政策为示范文本，部分内容为虚构设定，仅供学习与参考。
             </div>
         </main>
-
-        <footer class="footer">
-            <p>纽约市第一人民政府网站</p>
+        <footer>
+            <p>江南数字服务平台</p>
             <p>2025年5月20日生效 | 版本V2.0</p>
-            <p class="disclaimer">本网站由宇宙数字创新局维护，致力于打造虚构的平等数字社会。</p>
+            <p class="disclaimer">本网站致力于打造平等、包容的数字社会环境。</p>
         </footer>
     </div>
 </body>
