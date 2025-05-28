@@ -1,12 +1,9 @@
-<!--感谢vs code & live service提供的工具，额外的感谢github copilot总是能在必要之时提供代码补全-->
-<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>最忆是江南</title>
-  <link rel="icon" href="/01zyjn/zyjnicon.png" type="image/png"> 
-  <!-- 感谢豆包女士和CodePen先生对CSS提出的美化建议 -->
+  <link rel="icon" href="01zyjn/zyjnicon.png" type="image/png"> 
     <style>
     * {
       margin: 0;
@@ -16,8 +13,8 @@
     }
     body {
       line-height: 1.6;
-      color: #4a4238; /* 深褐色文本 */
-      background-color: #f8f5f0; /* 米白色背景 */
+      color: #4a4238; 
+      background-color: #f8f5f0;
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmNWYzZWUiPjwvcmVjdD4KPC9zdmc+'); /* 轻微的纹理 */
     }
     .container {
@@ -25,10 +22,9 @@
       margin: 0 auto;
       padding: 0 15px;
     }
-    /* 顶部导航优化 */
     .header {
-      background-color: rgba(242, 237, 228, 0.9); /* 米黄色半透明背景 */
-      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); /* 褐色阴影 */
+      background-color: rgba(242, 237, 228, 0.9); 
+      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); 
       z-index: 100;
     }
     .header-top {
@@ -36,19 +32,19 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 0;
-      border-bottom: 1px solid #e6dfd4; /* 浅褐色边框 */
+      border-bottom: 1px solid #e6dfd4;
       font-size: 0.9em;
-      color: #736357; /* 灰褐色文本 */
+      color: #736357; 
     }
     .header-top .welcome {
-      margin-right: 2em; /* 或 gap: 2em; 让欢迎语和日期隔开 */
+      margin-right: 2em;
     }
     .header-top .flex {
       flex: 1;
-      gap: 2em; /* 增加间距 */
+      gap: 2em;
     }
     .date {
-      margin-left: 1em; /* 日期左侧增加间距 */
+      margin-left: 1em;
     }
     .audio-container {
       flex: 1;
@@ -74,18 +70,18 @@
     }
     .search input {
       padding: 8px 12px;
-      border: 1px solid #d9ccb8; /* 浅褐色边框 */
+      border: 1px solid #d9ccb8;
       border-radius: 4px;
       width: 300px;
       transition: border-color 0.3s;
-      background-color: rgba(255, 255, 255, 0.8); /* 半透明白色 */
+      background-color: rgba(255, 255, 255, 0.8); 
     }
     .search input:focus {
-      border-color: #a67c52; /* 赭石色焦点边框 */
+      border-color: #a67c52; 
       outline: none;
     }
     .search button {
-      background: #a67c52; /* 赭石色按钮 */
+      background: #a67c52; 
       color: white;
       border: none;
       padding: 8px 15px;
@@ -104,12 +100,12 @@
     }
     .main-nav a {
       text-decoration: none;
-      color: #4a4238; /* 深褐色文本 */
+      color: #4a4238;
       font-weight: bold;
       position: relative;
     }
     .main-nav a:hover {
-      color: #a67c52; /* 赭石色悬停 */
+      color: #a67c52; 
     }
     .main-nav a::after {
       content: '';
@@ -118,7 +114,7 @@
       left: 50%;
       width: 0;
       height: 2px;
-      background: #a67c52; /* 赭石色下划线 */
+      background: #a67c52;
       transition: width 0.3s, left 0.3s;
     }
     .main-nav a:hover::after {
@@ -130,7 +126,7 @@
       height: 400px;
       margin: 30px 0;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(128, 115, 97, 0.2); /* 褐色阴影 */
+      box-shadow: 0 4px 12px rgba(128, 115, 97, 0.2); 
       overflow: hidden;
     }
     .banner img {
@@ -138,12 +134,10 @@
       height: 100%;
       object-fit: cover;
     }
-
-    /* 新闻列表优化 */
     .news-section {
-      background: rgba(255, 253, 249, 0.9); /* 米白色半透明背景 */
+      background: rgba(255, 253, 249, 0.9); 
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); /* 褐色阴影 */
+      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); 
       padding: 20px;
       margin-bottom: 30px;
     }
@@ -151,8 +145,8 @@
       font-size: 1.125rem;
       font-weight: bold;
       margin-bottom: 15px;
-      color: #8c6239; /* 深赭石色标题 */
-      border-bottom: 2px solid #8c6239; /* 深赭石色下划线 */
+      color: #8c6239; 
+      border-bottom: 2px solid #8c6239; 
       display: inline-block;
       padding-bottom: 5px;
     }
@@ -161,24 +155,23 @@
     }
     .news-list li {
       padding: 15px 0;
-      border-bottom: 1px dashed #e6dfd4; /* 浅褐色虚线分隔 */
+      border-bottom: 1px dashed #e6dfd4; 
     }
     .news-list a {
       text-decoration: none;
-      color: #4a4238; /* 深褐色文本 */
+      color: #4a4238;
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-size: 0.95rem;
     }
     .news-list a:hover {
-      color: #a67c52; /* 赭石色悬停 */
+      color: #a67c52;
     }
     .news-date {
-      color: #736357; /* 灰褐色日期 */
+      color: #736357;
       font-size: 0.9rem;
     }
-    /* 服务卡片响应式 */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -186,15 +179,15 @@
       margin-top: 30px;
     }
     .service-card {
-      background: rgba(255, 253, 249, 0.9); /* 米白色半透明背景 */
+      background: rgba(255, 253, 249, 0.9); 
       border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(128, 115, 97, 0.15); /* 褐色阴影 */
+      box-shadow: 0 4px 8px rgba(128, 115, 97, 0.15);
       overflow: hidden;
       transition: transform 0.3s ease;
     }
     .service-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(128, 115, 97, 0.25); /* 加深阴影 */
+      box-shadow: 0 6px 12px rgba(128, 115, 97, 0.25); 
     }
     .service-card img {
       width: 100%;
@@ -206,63 +199,50 @@
       text-align: center;
       font-weight: bold;
       font-size: 1rem;
-      color: #4a4238; /* 深褐色标题 */
+      color: #4a4238; 
     }
     .custom-audio {
-      width: 100%; /* 宽度占满父容器 */
+      width: 100%; 
       max-width: 100%;
       min-width: 180px;
       flex: 1;
-      background-color: rgba(255,255,255,0.8); /* 设置背景颜色为半透明白色 */
-      border: 1px solid #d9ccb8; /* 添加浅褐色边框 */
-      border-radius: 4px; /* 圆角边框 */
-      padding: 5px; /* 内边距 */
-      outline: none; /* 去除聚焦时的默认轮廓 */
-      margin: 0; /* 水平居中 */
-      display: block; /* 转为块级元素 */
+      background-color: rgba(255,255,255,0.8); 
+      border: 1px solid #d9ccb8;
+      border-radius: 4px; 
+      padding: 5px; 
+      outline: none; 
+      margin: 0; 
+      display: block; 
     }
-
-    /* 响应式调整 */
     @media (max-width: 480px) {
       .custom-audio {
-        max-width: 100%; /* 在小屏幕上占满容器 */
+        max-width: 100%; 
         min-width: auto;
       }
     }
-
-    /* 其他控件样式保持不变 */
     .custom-audio::-webkit-media-controls-play-button {
       background-color: #a67c52;
       border-radius: 50%;
     }
-
     .custom-audio::-webkit-media-controls-timeline {
       background-color: #e6dfd4;
     }
-
     .custom-audio::-webkit-media-controls-volume-slider {
       background-color: #e6dfd4;
     }
-    /* 修改播放按钮颜色 */
     .custom-audio::-webkit-media-controls-play-button {
-      background-color: #a67c52; /* 赭石色 */
+      background-color: #a67c52;
       border-radius: 50%;
     }
-
-    /* 修改进度条颜色 */
     .custom-audio::-webkit-media-controls-timeline {
-      background-color: #e6dfd4; /* 浅褐色 */
+      background-color: #e6dfd4; 
     }
-
-    /* 修改音量控制颜色 */
     .custom-audio::-webkit-media-controls-volume-slider {
-      background-color: #e6dfd4; /* 浅褐色 */
+      background-color: #e6dfd4; 
     }
-
-    /* 页脚优化 */
     .footer {
-      background: rgba(74, 66, 56, 0.9); /* 深褐色半透明背景 */
-      color: #f8f5f0; /* 米白色文本 */
+      background: rgba(74, 66, 56, 0.9);
+      color: #f8f5f0; 
       padding: 40px 0;
       margin-top: 50px;
       text-align: center;
@@ -271,7 +251,7 @@
       margin-bottom: 20px;
     }
     .footer-links a {
-      color: #f8f5f0; /* 米白色文本 */
+      color: #f8f5f0;
       margin: 0 15px;
       text-decoration: none;
       font-size: 0.95rem;
@@ -279,12 +259,12 @@
     }
     .footer-links a:hover {
       text-decoration: underline;
-      color: #e6dfd4; /* 浅米白色悬停 */
+      color: #e6dfd4; 
     }
     .copyright {
       font-size: 0.9rem;
       line-height: 1.8;
-      color: #e6dfd4; /* 浅米白色文本 */
+      color: #e6dfd4;
       opacity: 0.9;
     }    
     .flex { display: flex; }
@@ -296,12 +276,9 @@
     .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
   </style>
 </head>
-    <!-- 感谢红谷滩区政府为网页骨架搭建提供的灵感 -->
 <body>
-  <!-- 顶部导航栏 -->
   <header class="header">
     <div class="container">
-      <!-- 顶部信息栏（横向排列） -->
       <div class="header-top flex justify-between items-center">
         <div class="welcome">欢迎来到江南！ </div>
         <div class="flex items-center gap-4">
@@ -319,7 +296,6 @@
           </div> 
         </div> 
       </div>
-      <!-- 主体导航区（横向布局） -->
       <div class="header-main flex justify-between items-center py-4">
         <div class="logo">
           <img src="01zyjn/最忆江南标志.png" alt="最忆江南" height="60">
@@ -345,7 +321,6 @@
           </div>
         </form>
       </div>
-      <!-- 主导航菜单（横向排列） -->
       <nav class="main-nav">
         <ul class="flex gap-8 justify-center">
           <li><a href="01zyjn/江南要闻.html">江南要闻</a></li>
@@ -357,15 +332,12 @@
       </nav>
     </div>
   </header>
-  <!-- 主要内容区 -->
   <main class="container">
-    <!-- 横幅图片 -->
     <div class="banner">
       <a href="01zyjn/江南风景.html">
         <img src="01zyjn/江南风景.png" alt="江南风景">
       </a>
     </div>
-    <!-- 新闻列表 -->
     <div class="news-section">
       <h2 class="section-header">今日江南</h2>
       <ul class="news-list">
@@ -389,7 +361,6 @@
         </li>
       </ul>
     </div>
-    <!-- 服务卡片 -->
     <div class="services">
       <a href="01zyjn/江南旅游服务.html" class="service-card">
         <img src="01zyjn/江南旅游服务.png" alt="江南旅游服务">
@@ -405,7 +376,6 @@
       </a>
     </div>
   </main>
-  <!-- 页脚 -->
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
