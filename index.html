@@ -280,7 +280,7 @@
   <header class="header">
     <div class="container">
       <div class="header-top flex justify-between items-center">
-        <div class="welcome">欢迎来到江南！ </div>
+        <div class="welcome">欢迎来到江南！</div>
         <div class="flex items-center gap-4">
           <div class="date"> # </div>
           <div class="header-links flex items-center gap-4">
@@ -300,26 +300,30 @@
         <div class="logo">
           <img src="01zyjn/最忆江南标志.png" alt="最忆江南" height="60">
         </div>
-        <form action="https://www.baidu.com/s" method="get">
-          <div class="search flex items-center gap-2">
-            <input 
-              type="text" 
-              name="wd" 
-              placeholder="探寻江南的美景与故事" 
-              aria-label="搜索框" 
-              class="border rounded p-2"
-              required  
-              <!-- 添加required属性，确保用户必须输入内容 -->
-            >
-            <button 
-              type="submit" 
-              aria-label="搜索按钮" 
-              class="bg-gray-200 p-2 rounded"
-            >
-              搜索
-            </button>
-          </div>
-        </form>
+        <div class="flex items-center gap-4">
+          <a href="01zyjn/登录页.html" style="color:#8c6239;text-decoration:none;margin-right:10px;">登录</a>
+          <a href="01zyjn/注册页.html" style="color:#8c6239;text-decoration:none;margin-right:18px;">注册</a>
+          <form action="https://www.baidu.com/s" method="get">
+            <div class="search flex items-center gap-2">
+              <input 
+                type="text" 
+                name="wd" 
+                placeholder="探寻江南的美景与故事" 
+                aria-label="搜索框" 
+                class="border rounded p-2"
+                required  
+                <!-- 添加required属性，确保用户必须输入内容 -->
+              >
+              <button 
+                type="submit" 
+                aria-label="搜索按钮" 
+                class="bg-gray-200 p-2 rounded"
+              >
+                搜索
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <nav class="main-nav">
         <ul class="flex gap-8 justify-center">
