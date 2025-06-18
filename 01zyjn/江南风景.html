@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>江南风景</title>
+    <link rel="icon" href="zyjnicon.png" type="image/png"> 
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f5f0;
+            color: #4a4238;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #8c6239;
+            color: #fff8f0;
+            text-align: center;
+            padding: 48px 0 32px 0;
+            background-image: linear-gradient(120deg, #e6dfd4 0%, #bfa980 100%);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 4px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        /* 主体内容样式 */
+        main {
+            padding: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #8c6239;
+            font-size: 2em;
+            margin-top: 40px;
+            border-bottom: 2px solid #e6dfd4;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        h3 {
+            color: #a67c52;
+            font-size: 1.3em;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-top: 15px;
+        }
+
+        /* 风景画廊样式 */
+        .scenery-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 32px 0;
+        }
+
+        .scenery-gallery img {
+            width: 320px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(140, 98, 57, 0.12);
+            transition: transform 0.3s;
+            background: #fff;
+        }
+
+        .scenery-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(140, 98, 57, 0.18);
+        }
+
+        /* 特色卡片样式 */
+        .feature-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .feature-card {
+            flex: 1 1 300px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(140, 98, 57, 0.10);
+            padding: 24px;
+            min-width: 260px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 18px rgba(140, 98, 57, 0.18);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            color: #a67c52;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #8c6239;
+            color: #fff8f0;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 800px) {
+            .scenery-gallery img {
+                width: 100%;
+                height: 180px;
+            }
+
+            .feature-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>江南风景</h1>
+        <p>水墨江南，诗画人间。这里是中国最美的水乡风光与人文故事的汇聚地。</p>
+    </header>
+    <main>
+        <h2>江南印象</h2>
+        <p>
+            江南，位于中国长江以南，是中国历史文化最为悠久、风景最为秀丽的地区之一。这里河网密布，水乡纵横，粉墙黛瓦、小桥流水、烟雨朦胧，构成了独特的江南风情。无论是春日的桃红柳绿，还是秋夜的水光潋滟，江南都以她温婉的气质和诗意的景致吸引着无数游人。
+        </p>
+        <div class="scenery-gallery">
+            <img src="无锡古运河景区.png" alt="江南水乡之无锡古运河景区">
+            <img src="无锡鼋头渚.png" alt="江南春景之无锡鼋头渚">
+            <img src="江南园林.png" alt="江南园林之蠡园">
+        </div>
+        <h2>经典景点推荐</h2>
+        <div class="feature-section">
+            <div class="feature-card">
+                <h3>乌镇</h3>
+                <p>乌镇是江南六大古镇之一，河道纵横，石板小巷，古桥流水，夜色下的灯火倒映在水面，宛如一幅流动的水墨画。</p>
+            </div>
+            <div class="feature-card">
+                <h3>苏州园林</h3>
+                <p>苏州园林以精巧著称，拙政园、留园等世界文化遗产，亭台楼阁、假山池水，处处体现着“虽由人作，宛自天开”的造园艺术。</p>
+            </div>
+            <div class="feature-card">
+                <h3>西湖</h3>
+                <p>杭州西湖以“淡妆浓抹总相宜”闻名，湖光山色、断桥残雪、三潭印月等景点四季皆美，是中国最著名的旅游胜地之一。</p>
+            </div>
+        </div>
+        <h2>江南四季美景</h2>
+        <p>
+            春天，江南烟雨如丝，桃花盛开，柳絮飞舞；夏日，荷叶田田，水乡清凉；秋天，桂花飘香，稻谷金黄；冬日，雪落古镇，别有一番静谧与诗意。每个季节的江南，都有独特的韵味等待你来发现。
+        </p>
+    </main>
+    <footer>
+        <p>江南风景 · 最忆是江南</p>
+        <p>图片仅为示意，更多美景欢迎亲自探访</p>
+    </footer>
+</body>
+
+</html>

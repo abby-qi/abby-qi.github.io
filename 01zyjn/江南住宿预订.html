@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>江南住宿预订</title>
+    <link rel="icon" href="zyjnicon.png" type="image/png"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f5f0;
+            color: #4a4238;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 32px 20px 40px 20px;
+            background: #fffdfa;
+            box-shadow: 0 2px 12px rgba(140, 98, 57, 0.08);
+            border-radius: 14px;
+        }
+        h1 {
+            text-align: center;
+            color: #8c6239;
+            font-size: 2.2em;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+        .desc {
+            text-align: center;
+            color: #a67c52;
+            font-size: 1.15em;
+            margin-bottom: 28px;
+        }
+        .hotel-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+        }
+        .hotel-item {
+            background: #fdfaf6;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(140, 98, 57, 0.04);
+            margin-bottom: 22px;
+            padding: 20px 18px;
+        }
+        .hotel-name {
+            font-size: 1.18em;
+            color: #a67c52;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .hotel-info {
+            margin-bottom: 6px;
+            font-size: 1em;
+        }
+        .hotel-link, .hotel-tel {
+            color: #8c6239;
+            text-decoration: none;
+            border-bottom: 1px dotted #a67c52;
+            transition: color 0.2s;
+        }
+        .hotel-link:hover, .hotel-tel:hover {
+            color: #a67c52;
+            text-decoration: underline;
+        }
+        .tips {
+            background: #f8f5f0;
+            border-left: 4px solid #a67c52;
+            padding: 14px 18px;
+            margin: 32px 0 0 0;
+            color: #a67c52;
+            font-size: 1em;
+            border-radius: 6px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 2vw 24px 2vw;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>江南住宿预订</h1>
+        <div class="desc">精选江南水乡优质住宿，体验诗意生活，欢迎在线预订</div>
+        <ul class="hotel-list">
+            <li class="hotel-item">
+                <div class="hotel-name">乌镇水岸客栈</div>
+                <div class="hotel-info">地址：乌镇西栅景区内</div>
+                <div class="hotel-info">价格：￥380 起/晚</div>
+                <div class="hotel-info">电话：<a class="hotel-tel" href="tel:0573-88888888">0573-88888888</a></div>
+                <div class="hotel-info">预订：<a class="hotel-link" href="#">在线预订</a></div>
+            </li>
+            <li class="hotel-item">
+                <div class="hotel-name">苏州园林酒店</div>
+                <div class="hotel-info">地址：苏州市姑苏区平江路88号</div>
+                <div class="hotel-info">价格：￥420 起/晚</div>
+                <div class="hotel-info">电话：<a class="hotel-tel" href="tel:0512-66668888">0512-66668888</a></div>
+                <div class="hotel-info">预订：<a class="hotel-link" href="#">在线预订</a></div>
+            </li>
+            <li class="hotel-item">
+                <div class="hotel-name">西湖畔民宿</div>
+                <div class="hotel-info">地址：杭州市西湖区杨公堤18号</div>
+                <div class="hotel-info">价格：￥520 起/晚</div>
+                <div class="hotel-info">电话：<a class="hotel-tel" href="tel:0571-12345678">0571-12345678</a></div>
+                <div class="hotel-info">预订：<a class="hotel-link" href="#">在线预订</a></div>
+            </li>
+        </ul>
+        <div class="tips">
+            <strong>温馨提示：</strong> 建议提前预订，节假日房源紧张。如需帮助请拨打各酒店电话或咨询在线客服。
+        </div>
+    </div>
+</body>
+</html>

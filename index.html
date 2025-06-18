@@ -1,138 +1,438 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天庭政务通-天庭官方网上办事大厅</title>
-    <link rel="stylesheet" href="../css/tianting.css">
-    <link rel="icon" href="../images/logo.jpg" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>最忆是江南</title>
+  <link rel="icon" href="01zyjn/zyjnicon.png" type="image/png"> 
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Microsoft YaHei', Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      color: #4a4238; 
+      background-color: #f8f5f0;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmNWYzZWUiPjwvcmVjdD4KPC9zdmc+'); /* 轻微的纹理 */
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .header {
+      background-color: rgba(242, 237, 228, 0.9); 
+      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); 
+      z-index: 100;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #e6dfd4;
+      font-size: 0.9em;
+      color: #736357; 
+    }
+    .header-top .welcome {
+      margin-right: 2em;
+    }
+    .header-top .flex {
+      flex: 1;
+      gap: 2em;
+    }
+    .date {
+      margin-left: 1em;
+    }
+    .audio-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 100%;
+      min-width: 200px;
+    }
+    .header-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    .logo img {
+      height: 60px;
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .search input {
+      padding: 8px 12px;
+      border: 1px solid #d9ccb8;
+      border-radius: 4px;
+      width: 300px;
+      transition: border-color 0.3s;
+      background-color: rgba(255, 255, 255, 0.8); 
+    }
+    .search input:focus {
+      border-color: #a67c52; 
+      outline: none;
+    }
+    .search button {
+      background: #a67c52; 
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .main-nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+    .main-nav a {
+      text-decoration: none;
+      color: #4a4238;
+      font-weight: bold;
+      position: relative;
+    }
+    .main-nav a:hover {
+      color: #a67c52; 
+    }
+    .main-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: #a67c52;
+      transition: width 0.3s, left 0.3s;
+    }
+    .main-nav a:hover::after {
+      width: 100%;
+      left: 0;
+    }
+    /* 横幅图片*/
+    .banner {
+      height: 400px;
+      margin: 30px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(128, 115, 97, 0.2); 
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .news-section {
+      background: rgba(255, 253, 249, 0.9); 
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(128, 115, 97, 0.1); 
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .section-header {
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #8c6239; 
+      border-bottom: 2px solid #8c6239; 
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .news-list {
+      list-style: none;
+    }
+    .news-list li {
+      padding: 15px 0;
+      border-bottom: 1px dashed #e6dfd4; 
+    }
+    .news-list a {
+      text-decoration: none;
+      color: #4a4238;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .news-list a:hover {
+      color: #a67c52;
+    }
+    .news-date {
+      color: #736357;
+      font-size: 0.9rem;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .service-card {
+      background: rgba(255, 253, 249, 0.9); 
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(128, 115, 97, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(128, 115, 97, 0.25); 
+    }
+    .service-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .service-title {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #4a4238; 
+    }
+    .custom-audio {
+      width: 100%; 
+      max-width: 100%;
+      min-width: 180px;
+      flex: 1;
+      background-color: rgba(255,255,255,0.8); 
+      border: 1px solid #d9ccb8;
+      border-radius: 4px; 
+      padding: 5px; 
+      outline: none; 
+      margin: 0; 
+      display: block; 
+    }
+    @media (max-width: 480px) {
+      .custom-audio {
+        max-width: 100%; 
+        min-width: auto;
+      }
+    }
+    .custom-audio::-webkit-media-controls-play-button {
+      background-color: #a67c52;
+      border-radius: 50%;
+    }
+    .custom-audio::-webkit-media-controls-timeline {
+      background-color: #e6dfd4;
+    }
+    .custom-audio::-webkit-media-controls-volume-slider {
+      background-color: #e6dfd4;
+    }
+    .custom-audio::-webkit-media-controls-play-button {
+      background-color: #a67c52;
+      border-radius: 50%;
+    }
+    .custom-audio::-webkit-media-controls-timeline {
+      background-color: #e6dfd4; 
+    }
+    .custom-audio::-webkit-media-controls-volume-slider {
+      background-color: #e6dfd4; 
+    }
+    .footer {
+      background: rgba(74, 66, 56, 0.9);
+      color: #f8f5f0; 
+      padding: 40px 0;
+      margin-top: 50px;
+      text-align: center;
+    }
+    .footer-links {
+      margin-bottom: 20px;
+    }
+    .footer-links a {
+      color: #f8f5f0;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+      color: #e6dfd4; 
+    }
+    .copyright {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #e6dfd4;
+      opacity: 0.9;
+    }    
+    .flex { display: flex; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .gap-4 { gap: 1rem; }
+    .gap-8 { gap: 2rem; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    a {
+  text-decoration: none;
+  }
+    a:hover {
+    text-decoration: underline;
+  }
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.main-nav a,
+.main-nav a:hover {
+  text-decoration: none;
+}
+  </style>
 </head>
 <body>
-    <div id="cloud1" class="cloud"></div>
-    <div id="cloud2" class="cloud"></div>
-    <div id="cloud3" class="cloud"></div>
-    <div id="cloud4" class="cloud"></div>
-    <!-- 页头 -->
-    <header>
-        <div class="logo-container">
-            <img src="../images/logo.jpg" alt="天庭logo">
-            <div>
-                <h1>天庭政务通</h1>
-                <p>三界一体化服务平台</p>
+  <header class="header">
+    <div class="container">
+      <div class="header-top flex justify-between items-center">
+        <div class="welcome">欢迎来到江南！</div>
+        <div class="flex items-center gap-4">
+          <div class="date"> # </div>
+          <div class="header-links flex items-center gap-4">
+            <a href="01zyjn/无障碍访问政策.html" aria-label="无障碍访问">无障碍</a>
+            <a href="01zyjn/反歧视政策.html" aria-label="反歧视政策">反歧视</a>
+            
+            <div class="audio-container">
+            <p class="text-sm">点击播放江南古韵之音</p>                
+            <audio controls class="custom-audio">
+              <source src="01zyjn/jasmine.mp3" type="audio/mp3">
+            </audio>
+          </div>
+          </div> 
+        </div> 
+      </div>
+      <div class="header-main flex justify-between items-center py-4">
+        <div class="logo">
+          <img src="01zyjn/最忆江南标志.png" alt="最忆江南" height="60">
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="01zyjn/登录页.html" style="color:#8c6239;text-decoration:none;margin-right:10px;">登录</a>
+          <a href="01zyjn/注册页.html" style="color:#8c6239;text-decoration:none;margin-right:18px;">注册</a>
+          <form action="https://www.baidu.com/s" method="get">
+            <div class="search flex items-center gap-2">
+              <input 
+                type="text" 
+                name="wd" 
+                placeholder="探寻江南的美景与故事" 
+                aria-label="搜索框" 
+                class="border rounded p-2"
+                required  
+                <!-- 添加required属性，确保用户必须输入内容 -->
+              >
+              <button 
+                type="submit" 
+                aria-label="搜索按钮" 
+                class="bg-gray-200 p-2 rounded"
+              >
+                搜索
+              </button>
             </div>
+          </form>
         </div>
-        <div class="user-panel">
-            <button onclick="window.location.href='../html/待拓展.html'" class="btn ">仙籍登录</button>
-            <button onclick="window.location.href='../html/待拓展.html'" class="btn ">仙籍注册</button>
-        </div>
-    </header>
-    <!-- 导航 -->
-    <nav>
-        <ul>
-            <li><a href="index.html"><i class="icon-home"></i> 天庭首页</a></li>
-            <li><a href="../html/仙籍管理.html"> 仙籍管理</a></li>
-            <li><a href="../html/法宝申请.html"> 法宝申请</a></li>
-            <li><a href="../html/腾云审批.html"> 腾云审批</a></li>
-            <li><a href="../html/三界投诉.html"></i> 三界投诉</a></li>
-            <li><a href="../html/天规公示.html"></i> 天规公示</a></li>
+      </div>
+      <nav class="main-nav">
+        <ul class="flex gap-8 justify-center">
+          <li><a href="01zyjn/江南要闻.html">江南要闻</a></li>
+          <li><a href="01zyjn/江南风情.html">江南风情</a></li>
+          <li><a href="01zyjn/江南美食.html">江南美食</a></li>
+          <li><a href="01zyjn/江南住宿.html">江南住宿</a></li> 
+          <li><a href="01zyjn/互动交流.html">互动交流</a></li>
         </ul>
-    </nav>
-
-    <!-- 搜索 -->
-    <section class="search-section">
-        <div class="search-container">
-            <input type="text" placeholder="输入仙术名称、天规编号或办事关键词...">
-            <button onclick="window.location.href='../html/待拓展.html'" class="search-btn">搜天索地</button>
-        </div>
-        <div class="quick-links">
-            <span>热门服务：</span>
-            <a href="../html/待拓展.html">蟠桃会请柬</a>
-            <a href="../html/待拓展.html">筋斗云年审</a>
-            <a href="../html/待拓展.html">仙丹申领</a>
-            <a href="../html/待拓展.html">下凡通行证</a>
-        </div>
-    </section>
-
-    <!-- 内容区 -->
-    <main>
-        <section class="service-section">
-            <h2><i class="icon-services"></i> 天庭高频仙务</h2>
-            <div class="service-grid">
-                <div onclick="window.location.href='../html/待拓展.html'" class="service-card">
-                    <i class="icon-immortal"></i>
-                    <h3>仙籍注册</h3>
-                    <p>位列仙班登记注册</p>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="service-card">
-                    <i class="icon-palace" ></i>
-                    <h3>仙府审批</h3>
-                    <p>洞府/仙宫建造许可</p>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="service-card">
-                    <i class="icon-weapon"></i>
-                    <h3>法宝备案</h3>
-                    <p>神器法宝登记备案</p>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="service-card">
-                    <i class="icon-marry"></i>
-                    <h3>仙缘登记</h3>
-                    <p>神仙眷侣姻缘登记</p>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="service-card">
-                    <i class="icon-punish"></i>
-                    <h3>天罚申诉</h3>
-                    <p>雷劫处罚异议申请</p>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="service-card">
-                    <i class="icon-transfer"></i>
-                    <h3>道行转移</h3>
-                    <p>修为道行过户手续</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="guide-section">
-            <h2><i class="icon-guide"></i> 新仙办事指南</h2>
-            <div class="guide-container">
-                <div onclick="window.location.href='../html/待拓展.html'" class="guide-card">
-                    <h3>📜 天庭文书规范</h3>
-                    <p>表章书写格式要求<br>错字修改流程<br>加急文书申请</p>
-                    <a href="../html/待拓展.html">查看天规 ></a>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="guide-card">
-                    <h3>⏱ 办事时限承诺</h3>
-                    <p>仙籍注册：3日<br>法宝申请：7日<br>下凡通行证：即办</p>
-                    <a href="../html/待拓展.html">查看详情 ></a>
-                </div>
-                <div onclick="window.location.href='../html/待拓展.html'" class="guide-card">
-                    <h3>❗ 错字警示案例</h3>
-                    <p>雷部文书错字误引天雷<br>蟠桃会请柬错字误会址</p>
-                    <a href="../html/待拓展.html">查看案例 ></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- 页脚 -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>天庭政务通</h3>
-                <p>三界权威官方服务平台</p>
-            </div>
-            <div class="footer-section">
-                <h4>服务时间</h4>
-                <p>卯时至酉时</p>
-            </div>
-            <div class="footer-section">
-                <h4>天务咨询</h4>
-                <p>千里传音：8888-8888<br>仙鹤传书：8888888@tianting.gov</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>© 2025 天庭政务管理局 版权所有 | 天ICP备88888888号-1</p>
-            <p>重要提示：侵权将引发天罚雷劫！</p>
-        </div>
-    </footer>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <div class="banner">
+      <a href="01zyjn/江南风景.html">
+        <img src="01zyjn/江南风景.png" alt="江南风景">
+      </a>
+    </div>
+    <div class="news-section">
+      <h2 class="section-header">今日江南</h2>
+      <ul class="news-list">
+        <li>
+          <a href="01zyjn/江南古镇举办特色民俗活动.html">
+            <span class="news-title">江南古镇举办特色民俗活动</span>
+            <time class="news-date" datetime="2025-05-10">2025-05-10</time>
+          </a>
+        </li>
+        <li>
+          <a href="01zyjn/江南美食节即将开幕.html">
+            <span class="news-title">江南美食节即将开幕</span>
+            <time class="news-date" datetime="2025-05-09">2025-05-09</time>
+          </a>
+        </li>
+        <li>
+          <a href="01zyjn/江南水乡新景点开放.html">
+            <span class="news-title">江南水乡新景点开放</span>
+            <time class="news-date" datetime="2025-05-08">2025-05-08</time>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="services">
+      <a href="01zyjn/江南旅游服务.html" class="service-card">
+        <img src="01zyjn/江南旅游服务.png" alt="江南旅游服务">
+        <div class="service-title">江南旅游服务</div>
+      </a>
+      <a href="01zyjn/江南美食推荐.html" class="service-card">
+        <img src="01zyjn/江南美食推荐.png" alt="江南美食推荐">
+        <div class="service-title">江南美食推荐</div>
+      </a>
+      <a href="01zyjn/江南住宿预订.html" class="service-card">
+        <img src="01zyjn/江南住宿预订.png" alt="江南住宿预订">
+        <div class="service-title">江南住宿预订</div>
+      </a>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="01zyjn/关于江南之旅.html">关于江南之旅</a>
+        <a href="01zyjn/隐私及合规性承诺.html">隐私及合规性承诺</a>
+        <a href="01zyjn/游客的权利与义务.html">游客的权利与义务</a>
+      </div>
+      <div class="copyright">
+        <p>主办单位：最忆江南网站管理团队</p>
+        <p>地址：虚拟的江南之地</p>
+        <p>
+         <a href="01zyjn/反歧视政策.html" style="color:#e6dfd4;font-size:1.2em;">
+    我们反对、抵制所有的歧视行为！
+</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- 感谢克劳德先生对本站所有JS内容的技术支持 -->
+  <script>
+  function getWeekdayName(day) {
+    const weekdays = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+    return weekdays[day];
+  }
+  function updateDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const date = now.getDate();
+    const weekday = getWeekdayName(now.getDay());
+    document.querySelector('.date').textContent = 
+      `${year}年${month}月${date}日 ${weekday}`;
+  }
+  updateDate();
+  // 可选：每分钟自动更新时间
+  setInterval(updateDate, 60000);
+</script>
 </body>
 </html>

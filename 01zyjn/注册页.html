@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link rel="icon" href="zyjnicon.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f5f0;
+            color: #4a4238;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 520px;
+            margin: 60px auto;
+            padding: 36px 24px 44px 24px;
+            background: #fffdfa;
+            box-shadow: 0 4px 24px rgba(140, 98, 57, 0.10);
+            border-radius: 18px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 18px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #e6dfd4;
+        }
+        h1 {
+            color: #8c6239;
+            font-size: 2em;
+            letter-spacing: 3px;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .desc {
+            text-align: center;
+            color: #a67c52;
+            font-size: 1.08em;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        label {
+            font-size: 1em;
+            margin-bottom: 6px;
+            color: #8c6239;
+        }
+        input[type="text"],
+        input[type="password"] {
+            padding: 10px 12px;
+            border: 1px solid #e6dfd4;
+            border-radius: 6px;
+            font-size: 1em;
+            background: #f8f5f0;
+            color: #4a4238;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #a67c52;
+            outline: none;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: flex-end;
+        }
+        button {
+            background: #a67c52;
+            color: #fffdfa;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 28px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #8c6239;
+        }
+        .tips {
+            background: #f8f5f0;
+            border-left: 4px solid #a67c52;
+            padding: 12px 16px;
+            margin: 28px 0 0 0;
+            color: #a67c52;
+            font-size: 0.98em;
+            border-radius: 6px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 14px 2vw 24px 2vw;
+            }
+            h1 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>用户注册</h1>
+            <div class="desc">欢迎注册，开启您的江南之旅账号</div>
+        </header>
+        <form>
+            <div>
+                <label for="username">账户</label>
+                <input type="text" id="username" name="username" placeholder="请输入用户名" autocomplete="username" required>
+            </div>
+            <div>
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码" autocomplete="new-password" required>
+            </div>
+            <div>
+                <label for="confirm-password">确认</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="请再次输入密码" required>
+            </div>
+            <div class="btn-group">
+                <button type="submit">注册</button>
+                <button type="reset" style="background:#e6dfd4;color:#8c6239;">重置</button>
+            </div>
+        </form>
+        <div class="tips">
+            <strong>温馨提示：</strong> 请妥善保管您的账号信息，密码建议包含字母和数字，注册后可登录维护个人资料。
+        </div>
+    </div>
+</body>
+</html>
