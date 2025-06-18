@@ -1,0 +1,254 @@
+/* 路径导航 */
+.path-nav {
+    padding: 15px 5%;
+    color: #a9c6e6;
+    border-bottom: 1px solid rgba(249, 217, 35, 0.2);
+}
+
+/* 标题区 */
+.artifact-header {
+    padding: 20px 5%;
+    margin: 0 5% 30px;
+    background: rgba(15, 30, 60, 0.8);
+    border-radius: 12px;
+    position: relative;
+}
+.artifact-header h1 {
+    font-size: 2rem;
+    color: #f9d923;
+    text-shadow: 0 0 15px rgba(249, 217, 35, 0.7);
+}
+.artifact-badge .badge {
+    background: rgba(60, 45, 10, 0.6);
+    border: 1px solid #f9d923;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* 法宝分类 */
+.artifact-types {
+    padding: 0 5% 30px;
+}
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.type-card {
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 10px;
+    background: rgba(20, 35, 70, 0.6);
+    transition: all 0.3s;
+}
+.type-card:hover {
+    background: rgba(30, 50, 100, 0.8);
+    transform: translateY(-5px);
+}
+.type-card i {
+    font-size: 3.5rem;
+    color: #f9d923;
+    margin-bottom: 15px;
+    display: block;
+}
+.type-card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* 申请单 */
+.artifact-form {
+    padding: 30px 5%;
+    margin: 0 5% 40px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+label {
+    display: block;
+    color: #f9d923;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+input, select {
+    width: 90%;
+    padding: 12px;
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid rgba(249, 217, 35, 0.3);
+    border-radius: 8px;
+    color: #f0e6d2;
+}
+.trait-group, .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(10, 20, 40, 0.5);
+    border-radius: 8px;
+}
+.upload-area {
+    border: 2px dashed rgba(249, 217, 35, 0.5);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+}
+.form-footer {
+    margin-top: 30px;
+    text-align: center;
+}
+.btn-white {
+    background: transparent;
+    border: 1px solid #e1b70f;
+    color: #c6c6c3;
+    padding: 8px 30px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.btn-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(204, 204, 16, 0.5);
+}
+.btn-gold {
+    background: linear-gradient(to right, #8a6d1b, #f9d923);
+    color: #0c1a3a;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-gold:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(204, 204, 16, 0.5);
+}
+.btn-preview {
+    background: transparent;
+    border: 1px solid #f9d923;
+    color: #f9d923;
+    padding: 12px 30px;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.btn-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(204, 204, 16, 0.5);
+}
+
+/* 天规警示 */
+.artifact-warning {
+    background: rgba(120, 30, 20, 0.4);
+    border: 1px solid #a52a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 5% 40px;
+}
+.warning-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.warning-header h3 {
+    color: #ff5e5e;
+    margin-left: 10px;
+}
+.artifact-warning li {
+    margin: 15px 0;
+    position: relative;
+    padding-left: 25px;
+}
+.artifact-warning li:before {
+    content: "!";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #ff5e5e;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+
+/* 申请流程 */
+.artifact-process {
+    padding: 0 5% 50px;
+}
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.step {
+    text-align: center;
+    position: relative;
+}
+.step:after {
+    content: "→";
+    position: absolute;
+    right: -20px;
+    top: 25px;
+    color: #f9d923;
+    font-size: 1.8rem;
+}
+.step:last-child:after {
+    display: none;
+}
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(249, 217, 35, 0.2);
+    border: 2px solid #f9d923;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    line-height: 60px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+/* 法宝页样式 */
+        .artifact-bg {
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzFhM2EiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDAwYTI0IiBzdG9wLW9wYWNpdHk9Ii43Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGZpbHRlciBpZD0iYiIgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjMiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCBmaWxsPSJ1cmwoI2EpIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+CiAgPGcgZmlsdGVyPSJ1cmwoI2IpIiBvcGFjaXR5PSIuNCI+CiAgICA8cGF0aCBkPSJNMzAgMzBMMzAgMTBNNjAgMjBMNjAgNTBNOTAgMTBMOTAgNDAiIHN0cm9rZT0iI2Y5ZDkyMyIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPC9nPgo8L3N2Zz4=') no-repeat center/cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(180, 160, 60, 0.5);
+        }
+        
+        .artifact-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(25, 40, 80, 0.7);
+            border: 1px solid rgba(249, 217, 35, 0.4);
+        }
+        
+        .artifact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(249, 217, 35, 0.3);
+            border-color: #f9d923;
+        }
+        
+        .glow-border {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px;
+            right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #f9d923, #ff8c00, #f9d923);
+            z-index: -1;
+            border-radius: 12px;
+            animation: glow 3s infinite;
+        }
+        
+       

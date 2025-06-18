@@ -1,0 +1,179 @@
+
+/* 导航 */
+.path-nav {
+    padding: 15px 5%;
+    color: #a9c6e6;
+    border-bottom: 1px solid rgba(249, 217, 35, 0.2);
+}
+.path-nav a {
+    color: #f9d923;
+    text-decoration: none;
+}
+
+/* 仙籍管理样式 */
+        .immortal-registry {
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzFhM2EiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDAwYTI0IiBzdG9wLW9wYWNpdHk9Ii41Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGZpbHRlciBpZD0iYiIgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSI+CiAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCBmaWxsPSJ1cmwoI2EpIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIi8+CiAgPGcgZmlsdGVyPSJ1cmwoI2IpIiBvcGFjaXR5PSIuMyI+CiAgICA8Y2lyY2xlIGN4PSIxMCUiIGN5PSIxMCUiIHI9IjEwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjlkOTIzIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDxjaXJjbGUgY3g9IjcwJSIgY3k9IjgwJSIgcj0iODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y5ZDkyMyIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8L2c+Cjwvc3ZnPg==') no-repeat center/cover;
+            border-radius: 15px;
+            border: 1px solid rgba(249, 217, 35, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .gold-border {
+            border: 2px solid #f9d923;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(249, 217, 35, 0.4);
+        }
+
+        .registry-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .registry-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+/* 标题 */
+.registry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    margin: 0 5% 30px;
+    background: rgba(15, 30, 60, 0.8);
+}
+.title-group h1 {
+    font-size: 2rem;
+    color: #f9d923;
+    text-shadow: 0 0 10px rgba(249, 217, 35, 0.5);
+}
+.immortal-badge .badge {
+    background: rgba(249, 217, 35, 0.15);
+    border: 1px solid #f9d923;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 10px;
+}
+
+/* 功能区 */
+.immortal-main {
+    padding: 20px 5% 40px;
+}
+.registry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.registry-card {
+    background: rgba(20, 40, 80, 0.7);
+    border-radius: 10px;
+    padding: 25px;
+}
+.registry-card h2 {
+    color: #f9d923;
+    border-bottom: 1px solid rgba(249, 217, 35, 0.3);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+/* 信息样式 */
+.info-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(30, 60, 120, 0.4);
+    border-radius: 5px;
+}
+.info-group label {
+    color: #f9d923;
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+}
+
+/* 服务列表 */
+.service-list a {
+    display: block;
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(40, 80, 160, 0.5);
+    border-radius: 5px;
+    color: #a9c6e6;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.service-list a:hover {
+    background: rgba(60, 120, 200, 0.7);
+    transform: translateX(10px);
+}
+.service-list i {
+    margin-right: 10px;
+    color: #f9d923;
+}
+
+
+
+/* 警示区 */
+.document-warning {
+    background: rgba(120, 20, 30, 0.3);
+    border: 1px solid #a52a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px 0;
+}
+.warning-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.warning-header h3 {
+    color: #ff5e5e;
+    margin-left: 10px;
+}
+.warning-content li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+.warning-content li:before {
+    content: "!";
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: #ff5e5e;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    color: #fff;
+}
+/*anjian*/
+.btn-download {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(to right, #8a6d1b, #f9d923);
+    color: #0c1a3a;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: none;
+}
+.btn-download:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(204, 204, 16, 0.5);
+}
+/* 常见问题 */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.faq-card {
+    background: rgba(25, 50, 100, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 3px solid #f9d923;
+}
+.faq-card h3 {
+    color: #f9d923;
+    margin-bottom: 10px;
+}

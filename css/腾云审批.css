@@ -1,0 +1,133 @@
+
+/* 路径导航 */
+.path-nav {
+    padding: 15px 5%;
+    color: #a9c6e6;
+    border-bottom: 1px solid rgba(249, 217, 35, 0.2);
+}
+
+/* 标题区 */
+.cloud-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    margin: 0 5% 30px;
+    background: rgba(15, 30, 60, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(140, 174, 240, 0.5);
+}
+.cloud-header h1 {
+    font-size: 2rem;
+    color: #f9d923;
+    text-shadow: 0 0 15px rgba(249, 217, 35, 0.7);
+}
+.cloud-badge .badge {
+    background: rgba(60, 80, 120, 0.6);
+    border: 1px solid #8caef0;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* 审批状态 */
+.cloud-status {
+    padding: 0 5% 30px;
+}
+.status-card {
+    display: flex;
+    align-items: center;
+    background: rgba(20, 40, 80, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+}
+/*  */
+.status-info h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.status-waiting {
+    color: #f9d923;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 申请详情 */
+.cloud-detail {
+    padding: 0 5% 30px;
+}
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.detail-card {
+    background: rgba(20, 40, 80, 0.7);
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(140, 174, 240, 0.3);
+}
+.detail-card h2 {
+    font-size: 1.4rem;
+    color: #8caef0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(140, 174, 240, 0.3);
+}
+
+
+/* 天规警示 */
+.cloud-warning {
+    background: rgba(120, 30, 20, 0.4);
+    border: 1px solid #a52a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 5% 40px;
+}
+.warning-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.warning-header h3 {
+    color: #ff5e5e;
+    margin-left: 10px;
+}
+.cloud-warning li {
+    margin: 15px 0;
+    position: relative;
+    padding-left: 25px;
+}
+.cloud-warning li:before {
+    content: "!";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #ff5e5e;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+
+/* 流程 */
+.process-steps{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.process-step1 {
+    content: "→";
+    position: absolute;
+    right: -20px;
+    top: 25px;
+    color: #f9d923;
+    font-size: 1.8rem;
+}
+
+
