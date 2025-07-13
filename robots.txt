@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# 禁止爬取特定目录
+Disallow: /CSS/
+Disallow: /images/generate-placeholders.html
+Disallow: /images/generate-placeholders.js
+
+# Sitemap
+Sitemap: https://example.com/sitemap.xml

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World | 技术博客</title>
+    <meta name="description" content="这是我的第一篇技术博客文章，分享我对编程和技术的热爱与见解">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="../posts/hello-world.html">
+    <meta property="og:title" content="Hello World | 技术博客">
+    <meta property="og:description" content="这是我的第一篇技术博客文章，分享我对编程和技术的热爱与见解">
+    <meta property="og:image" content="../images/posts/hello-world.svg">
+    <meta property="article:published_time" content="2024-03-15T09:00:00+08:00">
+    <meta property="article:author" content="技术博主">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Web开发">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="../posts/hello-world.html">
+    <meta property="twitter:title" content="Hello World | 技术博客">
+    <meta property="twitter:description" content="这是我的第一篇技术博客文章，分享我对编程和技术的热爱与见解">
+    <meta property="twitter:image" content="../images/posts/hello-world.svg">
+    
+    <!-- 规范链接 -->
+    <link rel="canonical" href="../posts/hello-world.html">
+    
+    <link rel="stylesheet" href="../CSS/main.css">
+    <!-- 引入现代字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- 引入代码高亮 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <!-- 引入图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 网站图标 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="../" class="logo">Tech<span style="color: var(--accent-color)">Blog</span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="../"><i class="fas fa-home"></i> 首页</a>
+                <a href="../archive.html"><i class="fas fa-archive"></i> 归档</a>
+                <a href="../about.html"><i class="fas fa-user"></i> 关于</a>
+                <button id="theme-toggle" aria-label="切换主题">🌓</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="post-content">
+            <h1>Hello World</h1>
+            <div class="post-meta">
+                <time datetime="2024-03-15"><i class="far fa-calendar-alt"></i> 2024年3月15日</time>
+                <div class="post-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web开发</span>
+                </div>
+            </div>
+            
+            <div class="content">
+                <p>这是我的第一篇技术博客文章，在这里我想分享我对编程和技术的热爱与见解。作为一名开发者，我一直在探索如何更好地理解和应用各种编程概念。</p>
+                
+                <p>在这个博客中，我将记录我的学习历程、分享有用的技巧，以及讨论我在开发过程中遇到的挑战和解决方案。</p>
+                
+                <h2>为什么要写博客？</h2>
+                
+                <p>写博客不仅可以帮助我整理思路，还能与更多志同道合的开发者交流。通过分享知识，我们可以共同成长，推动技术的发展。</p>
+                
+                <h2>一个简单的示例</h2>
+                
+                <p>下面是一个简单的JavaScript函数，用来展示代码高亮功能：</p>
+                
+                <pre><code class="language-javascript">
+// 示例代码
+function greeting() {
+    console.log('欢迎来到我的技术博客！');
+}
+
+// 调用函数
+greeting();
+
+// 使用箭头函数
+const sayHello = (name) => {
+    return `你好，${name}！欢迎访问我的博客。`;
+};
+
+console.log(sayHello('朋友'));
+                </code></pre>
+                
+                <h2>未来计划</h2>
+                
+                <p>在接下来的文章中，我计划探讨以下主题：</p>
+                
+                <ul>
+                    <li>现代JavaScript特性及最佳实践</li>
+                    <li>响应式Web设计技巧</li>
+                    <li>前端框架比较与应用</li>
+                    <li>性能优化策略</li>
+                </ul>
+                
+                <p>希望我的分享能对你有所帮助！如果你有任何问题或建议，欢迎在评论区留言。</p>
+            </div>
+            
+            <div class="post-navigation">
+                <div class="post-nav-links">
+                    <a href="#" class="post-nav-prev disabled"><i class="fas fa-arrow-left"></i> 上一篇</a>
+                    <a href="#" class="post-nav-next">下一篇 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="post-comments">
+                <h3>评论</h3>
+                <p class="text-muted">评论功能即将上线，敬请期待...</p>
+            </div>
+        </article>
+    </main>
+    
+    <div class="related-posts section">
+        <div class="container">
+            <h3>你可能也喜欢</h3>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <time datetime="2024-03-20">2024.03.20</time>
+                    <h2><a href="#">现代CSS技巧与最佳实践</a></h2>
+                    <div class="post-excerpt">
+                        探索现代CSS的强大功能，包括Grid布局、Flexbox和CSS变量等...
+                    </div>
+                    <div class="post-tags">
+                        <span class="tag">CSS</span>
+                        <span class="tag">前端</span>
+                    </div>
+                </article>
+                
+                <article class="post-card">
+                    <time datetime="2024-03-25">2024.03.25</time>
+                    <h2><a href="#">React性能优化指南</a></h2>
+                    <div class="post-excerpt">
+                        学习如何优化React应用性能，避免常见陷阱，提升用户体验...
+                    </div>
+                    <div class="post-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">性能优化</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Tech<span style="color: var(--accent-color)">Blog</span></h3>
+                    <p>分享编程知识和技术见解的个人博客</p>
+                </div>
+                <div class="footer-links">
+                    <a href="../"><i class="fas fa-home"></i> 首页</a>
+                    <a href="../archive.html"><i class="fas fa-archive"></i> 归档</a>
+                    <a href="../about.html"><i class="fas fa-user"></i> 关于</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 TechBlog. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

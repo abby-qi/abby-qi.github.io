@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="#3498db"/>
+  
+  <!-- 标题 -->
+  <text x="600" y="250" font-family="Arial" font-size="80" font-weight="bold" fill="#ffffff" text-anchor="middle">Hello World</text>
+  
+  <!-- 副标题 -->
+  <text x="600" y="350" font-family="Arial" font-size="40" fill="#ffffff" text-anchor="middle">我的第一篇技术博客文章</text>
+  
+  <!-- 博客名称 -->
+  <text x="600" y="500" font-family="Arial" font-size="30" fill="#ffffff" text-anchor="middle">技术博客 | TechBlog</text>
+</svg>

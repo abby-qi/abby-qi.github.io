@@ -2,31 +2,146 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>技术博客 | 我的开发笔记</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术博客 | 分享编程与技术见解</title>
+    <meta name="description" content="一个关于编程、Web开发和技术见解的博客">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="./">
+    <meta property="og:title" content="技术博客 | 分享编程与技术见解">
+    <meta property="og:description" content="一个关于编程、Web开发和技术见解的博客">
+    <meta property="og:image" content="./images/og-image.svg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="./">
+    <meta property="twitter:title" content="技术博客 | 分享编程与技术见解">
+    <meta property="twitter:description" content="一个关于编程、Web开发和技术见解的博客">
+    <meta property="twitter:image" content="./images/twitter-image.svg">
+    
+    <!-- 规范链接 -->
+    <link rel="canonical" href="./">
+    
+    <link rel="stylesheet" href="./CSS/main.css">
+    <!-- 引入现代字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <!-- 引入代码高亮 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <!-- 引入图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 网站图标 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">我的技术博客</a></h1>
-        <nav>
-            <a href="about.html">关于我</a>
-        </nav>
+    <header class="navbar">
+        <div class="container">
+            <a href="./" class="logo">Tech<span style="color: var(--accent-color)">Blog</span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="./" class="active"><i class="fas fa-home"></i> 首页</a>
+                <a href="./archive.html"><i class="fas fa-archive"></i> 归档</a>
+                <a href="./about.html"><i class="fas fa-user"></i> 关于</a>
+                <button id="theme-toggle" aria-label="切换主题">🌓</button>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h2>最新文章</h2>
-        <div class="post-list">
-            <!-- 现有文章列表 -->
-            <article class="post-item">
-                <h3><a href="posts/2024-01-01-first-post.html">第一篇博客：Hello GitHub Pages</a></h3>
-                <p class="post-meta">2024-01-01 | 标签：入门</p>
+    <div class="hero section">
+        <div class="container">
+            <h1>探索技术的奇妙世界</h1>
+            <p class="lead">分享编程知识、开发经验和技术见解</p>
+        </div>
+    </div>
+
+    <main class="container section">
+        <h2 class="section-title">最新文章</h2>
+        
+        <!-- 文章列表 -->
+        <div class="posts-grid">
+            <article class="post-card">
+                <time datetime="2024-03-15">2024.03.15</time>
+                <h2><a href="./posts/hello-world.html">Hello World</a></h2>
+                <div class="post-excerpt">
+                    这是我的第一篇技术博客，分享我对编程和技术的热爱与见解...
+                </div>
+                <div class="post-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web开发</span>
+                </div>
             </article>
-            <!-- 新增文章可在此处添加 -->
+            
+            <article class="post-card">
+                <time datetime="2024-03-20">2024.03.20</time>
+                <h2><a href="#">现代CSS技巧与最佳实践</a></h2>
+                <div class="post-excerpt">
+                    探索现代CSS的强大功能，包括Grid布局、Flexbox和CSS变量等...
+                </div>
+                <div class="post-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">前端</span>
+                </div>
+            </article>
+            
+            <article class="post-card">
+                <time datetime="2024-03-25">2024.03.25</time>
+                <h2><a href="#">React性能优化指南</a></h2>
+                <div class="post-excerpt">
+                    学习如何优化React应用性能，避免常见陷阱，提升用户体验...
+                </div>
+                <div class="post-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">性能优化</span>
+                </div>
+            </article>
+        </div>
+        
+        <div class="view-more">
+            <a href="./archive.html" class="btn">查看更多文章 <i class="fas fa-arrow-right"></i></a>
         </div>
     </main>
+    
+    <section class="newsletter section">
+        <div class="container">
+            <h2>订阅更新</h2>
+            <p>获取最新文章和技术资讯直接发送到您的邮箱</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="您的邮箱地址" required>
+                <button type="submit" class="btn">订阅 <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
 
-    <footer>
-        <p>© 2024 我的技术博客 | 基于GitHub Pages构建</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Tech<span style="color: var(--accent-color)">Blog</span></h3>
+                    <p>分享编程知识和技术见解的个人博客</p>
+                </div>
+                <div class="footer-links">
+                    <a href="./"><i class="fas fa-home"></i> 首页</a>
+                    <a href="./archive.html"><i class="fas fa-archive"></i> 归档</a>
+                    <a href="./about.html"><i class="fas fa-user"></i> 关于</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 TechBlog. 保留所有权利.
+            </div>
+        </div>
     </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
