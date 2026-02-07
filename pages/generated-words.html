@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成的单词页面 - 日语学习平台</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/generated-words.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 返回按钮 -->
+        <div class="action-buttons">
+            <button class="btn btn-secondary" onclick="location.href='word-selector.html'">
+                <i class="fas fa-arrow-left"></i> 返回选择页面
+            </button>
+            <button class="btn btn-secondary" onclick="location.href='../index.html'">
+                <i class="fas fa-home"></i> 返回首页
+            </button>
+        </div>
+
+        <!-- 页面头部 -->
+        <div class="page-header">
+            <h1 class="page-title">📚 生成的单词页面</h1>
+            <p class="page-subtitle">包含你选择的单词，支持点读功能</p>
+            <div class="header-actions">
+                <button class="btn btn-primary" id="exportExcelBtn">
+                    <i class="fas fa-file-excel"></i> 导出为Excel
+                </button>
+            </div>
+        </div>
+
+        <!-- 生成的单词容器 -->
+        <div class="generated-container" id="generatedContainer">
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>正在加载选中的单词...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="../shared/common.js"></script>
+    <script src="../js/generated-words.js"></script>
+</body>
+</html>

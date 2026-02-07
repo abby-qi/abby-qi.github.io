@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语代词学习 - 统一平台</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="css/pronoun_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1 class="title">👤 日语代词学习</h1>
+            <p class="subtitle">人称代词 | 指代人或事物的词</p>
+        </header>
+
+        <div class="control-panel">
+            <div class="filter-section">
+                <span class="filter-label">代词类型：</span>
+                <div class="filter-buttons" id="typeFilters">
+                    <button class="filter-btn active" data-type="all">全部</button>
+                    <button class="filter-btn" data-type="人称">人称代词</button>
+                    <button class="filter-btn" data-type="指示">指示代词</button>
+                </div>
+            </div>
+
+            <div class="random-section">
+                <button class="random-btn" id="randomBtn">
+                    <i class="fas fa-random"></i> 随机抽查
+                </button>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+        <div class="loading" id="loading"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>
+    </div>
+
+    <script src="../../shared/common.js"></script>
+    <script src="../../shared/components.js"></script>
+    <script src="js/pronoun_module.js"></script>
+</body>
+</html>

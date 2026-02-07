@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词选择 - 日语学习平台</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/word-selector.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 深色模式适配 */
+        body.dark-mode {
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .container {
+            background-color: #1a1a2e;
+        }
+
+        body.dark-mode .header {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .control-panel {
+            background-color: #16213e;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .filter-label {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .filter-btn {
+            background-color: #0f3460;
+            border-color: #533483;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .filter-btn.active {
+            background-color: #533483;
+            border-color: #533483;
+        }
+
+        body.dark-mode .selector-container {
+            background-color: #16213e;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .loading {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .selection-controls {
+            background-color: #16213e;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .selection-info {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .btn {
+            border-color: #533483;
+        }
+
+        body.dark-mode .btn-secondary {
+            background-color: #0f3460;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .btn-success {
+            background-color: #533483;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .btn:hover {
+            background-color: #3a1c71;
+        }
+
+        /* 进一步筛选模块和单词卡片的深色模式适配 */
+        body.dark-mode .module-section h3 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .selectable-word {
+            background-color: #16213e;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border-color: #533483;
+        }
+
+        body.dark-mode .selectable-word:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            border-color: #533483;
+        }
+
+        body.dark-mode .selectable-word.selected {
+            border-color: #4caf50;
+            background-color: rgba(76, 175, 80, 0.1);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        body.dark-mode .selectable-word .word-main {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .selectable-word .word-kana {
+            color: #ff69b4;
+        }
+
+        body.dark-mode .selectable-word .word-meaning {
+            color: #c0c0c0;
+            background-color: #0f3460;
+            border-left-color: #533483;
+        }
+
+        body.dark-mode .selectable-word .category-tag {
+            background: linear-gradient(135deg, #533483, #3a1c71);
+            box-shadow: 0 2px 6px rgba(83, 52, 131, 0.3);
+        }
+
+        body.dark-mode .selectable-word .level-tag {
+            background-color: #533483;
+        }
+
+        body.dark-mode .error-state {
+            color: #c0c0c0;
+        }
+
+        body.dark-mode .error-state i {
+            color: #533483;
+        }
+
+        body.dark-mode .error-state h3 {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .pagination-container {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .pagination-btn {
+            background-color: #0f3460;
+            border-color: #533483;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .pagination-btn:hover:not(.disabled) {
+            background-color: #533483;
+            border-color: #533483;
+        }
+
+        body.dark-mode .pagination-info {
+            color: #c0c0c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- 页面头部 -->
+        <header class="header">
+            <h1 class="title">📝 单词选择</h1>
+            <p class="subtitle">选择你想要的单词，生成专属学习页面</p>
+        </header>
+
+        <!-- 选择控制区域 -->
+        <div class="control-panel">
+            <!-- 词性筛选 -->
+            <div class="filter-section">
+                <span class="filter-label">词性筛选：</span>
+                <div class="filter-buttons" id="moduleFilters">
+                    <button class="filter-btn active" data-module="all">全部</button>
+                </div>
+            </div>
+
+            <!-- 选择操作 -->
+            <div class="filter-section">
+                <span class="filter-label">选择操作：</span>
+                <div class="filter-buttons" id="actionButtons">
+                    <button class="filter-btn" id="selectAllBtn">全选</button>
+                    <button class="filter-btn" id="deselectAllBtn">取消全选</button>
+                    <button class="filter-btn" id="invertSelectionBtn">反选</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 单词选择容器 -->
+        <div class="selector-container" id="selectorContainer">
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>正在加载单词数据...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 选择控制栏 -->
+    <div class="selection-controls">
+        <div class="selection-info" id="selectionInfo">
+            已选择 <span id="selectedCount">0</span> 个单词
+        </div>
+        <div class="selection-buttons">
+            <button class="btn btn-secondary" id="clearSelectionBtn">清空选择</button>
+            <button class="btn btn-success" id="generatePageBtn">生成页面</button>
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="../shared/common.js"></script>
+    <script src="../js/word-selector.js"></script>
+</body>
+</html>

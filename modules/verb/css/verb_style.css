@@ -1,0 +1,170 @@
+/**
+ * 动词模块 - 特定样式
+ */
+
+/* 返回按钮 */
+.back-btn {
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    background: #f8f9fa;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-btn:hover {
+    background: #ffb6c1;
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* 加载状态 */
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+    color: #999;
+    display: none;
+}
+
+.loading.active {
+    display: block;
+}
+
+.loading i {
+    font-size: 2rem;
+    margin-right: 10px;
+    color: #ff69b4;
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: #999;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.empty-state .hint {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* 词性标签 */
+.type-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.type-tag.自 {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #6c5ce7;
+}
+
+.type-tag.他 {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #d35400;
+}
+
+/* 重要程度标签 */
+.importance-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.importance-tag.☆ {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #b8860b;
+}
+
+.importance-tag.□ {
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+    color: #666;
+}
+
+/* 动词分类标签 */
+.class-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+    letter-spacing: 0.5px;
+}
+
+/* 右上角词性标签容器 */
+.card-right-tags {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+}
+
+/* 释义项 */
+.meaning-item {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg, #faf0f5 0%, #ffe4e1 100%);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.meaning-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meaning-text {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* 筛选按钮组横向滚动 */
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .filter-buttons {
+        overflow-x: auto;
+        padding-bottom: 5px;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+    }
+}

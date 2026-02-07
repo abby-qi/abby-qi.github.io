@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语固定搭配学习 - 统一平台</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="css/fixed-collocations_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1 class="title">🔗 日语固定搭配学习</h1>
+            <p class="subtitle">固定词组 | 常用搭配和习惯用语</p>
+        </header>
+
+        <div class="control-panel">
+            <div class="filter-section">
+                <span class="filter-label">搭配类型：</span>
+                <div class="filter-buttons" id="typeFilters">
+                    <button class="filter-btn active" data-type="all">全部</button>
+                    <button class="filter-btn" data-type="名词+动词">名词+动词</button>
+                    <button class="filter-btn" data-type="副词+动词">副词+动词</button>
+                    <button class="filter-btn" data-type="形容词+名词">形容词+名词</button>
+                </div>
+            </div>
+
+            <div class="random-section">
+                <button class="random-btn" id="randomBtn">
+                    <i class="fas fa-random"></i> 随机抽查
+                </button>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+        <div class="loading" id="loading"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>
+    </div>
+
+    <script src="../../shared/common.js"></script>
+    <script src="../../shared/components.js"></script>
+    <script src="js/fixed-collocations_module.js"></script>
+</body>
+</html>

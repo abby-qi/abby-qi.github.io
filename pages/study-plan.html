@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语单词学习 - 学习计划生成</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/study-plan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container study-plan-container">
+        <!-- 页面头部 -->
+        <header class="study-plan-header">
+            <h1 class="title">📚 日语单词学习计划生成器</h1>
+            <p class="subtitle">根据记忆曲线，自动生成个性化学习计划</p>
+        </header>
+
+        <!-- 学习计划生成表单 -->
+        <div class="study-plan-form">
+            <div class="form-section">
+                <h3>📝 计划类型</h3>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="planByDays" name="planType" value="days" checked>
+                        <label for="planByDays">按天数</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="planByDailyWords" name="planType" value="dailyWords">
+                        <label for="planByDailyWords">按每天单词数</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>⚙️ 计划参数</h3>
+                <div class="form-row">
+                    <div class="form-group" id="daysGroup">
+                        <label for="totalDays">总天数</label>
+                        <input type="number" id="totalDays" name="totalDays" min="1" max="365" value="30">
+                    </div>
+                    <div class="form-group" id="dailyWordsGroup" style="display: none;">
+                        <label for="dailyNewWords">每天新单词</label>
+                        <input type="number" id="dailyNewWords" name="dailyNewWords" min="1" max="100" value="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewRatio">复习比例</label>
+                        <select id="reviewRatio" name="reviewRatio">
+                            <option value="0.5">0.5:1 (复习:新学)</option>
+                            <option value="1" selected>1:1 (复习:新学)</option>
+                            <option value="2">2:1 (复习:新学)</option>
+                            <option value="3">3:1 (复习:新学)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>📖 选择学习模块</h3>
+                <div class="module-selection" id="moduleSelection">
+                    <!-- 模块选项将通过JavaScript动态生成 -->
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div style="display: flex; gap: 10px;">
+                    <button type="button" class="btn-primary" id="generatePlanBtn">生成学习计划</button>
+                    <button type="button" class="btn-secondary" id="resetPlanBtn">重置</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 学习计划结果 -->
+        <div class="study-plan-result" id="studyPlanResult">
+            <div class="plan-header">
+                <h3>📋 学习计划</h3>
+                <div>
+                    <button type="button" class="btn-primary" id="savePlanBtn">保存计划</button>
+                    <button type="button" class="btn-secondary" id="printPlanBtn">打印计划</button>
+                </div>
+            </div>
+
+            <div class="plan-info">
+                <div class="plan-item">
+                    <span class="plan-item-label">计划名称</span>
+                    <span class="plan-item-value" id="planName">日语单词学习计划</span>
+                </div>
+                <div class="plan-item">
+                    <span class="plan-item-label">总天数</span>
+                    <span class="plan-item-value" id="planTotalDays">0</span>
+                </div>
+                <div class="plan-item">
+                    <span class="plan-item-label">每天新单词</span>
+                    <span class="plan-item-value" id="planDailyNewWords">0</span>
+                </div>
+                <div class="plan-item">
+                    <span class="plan-item-label">开始日期</span>
+                    <span class="plan-item-value" id="planStartDate"></span>
+                </div>
+                <div class="plan-item">
+                    <span class="plan-item-label">结束日期</span>
+                    <span class="plan-item-value" id="planEndDate"></span>
+                </div>
+                <div class="plan-item">
+                    <span class="plan-item-label">总单词数</span>
+                    <span class="plan-item-value" id="planTotalWords">0</span>
+                </div>
+            </div>
+
+            <div class="plan-days" id="planDays">
+                <!-- 每天的任务将通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="../shared/common.js"></script>
+    <script src="../js/study-plan.js"></script>
+</body>
+</html>

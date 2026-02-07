@@ -3,145 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>技术博客 | 分享编程与技术见解</title>
-    <meta name="description" content="一个关于编程、Web开发和技术见解的博客">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="./">
-    <meta property="og:title" content="技术博客 | 分享编程与技术见解">
-    <meta property="og:description" content="一个关于编程、Web开发和技术见解的博客">
-    <meta property="og:image" content="./images/og-image.svg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="./">
-    <meta property="twitter:title" content="技术博客 | 分享编程与技术见解">
-    <meta property="twitter:description" content="一个关于编程、Web开发和技术见解的博客">
-    <meta property="twitter:image" content="./images/twitter-image.svg">
-    
-    <!-- 规范链接 -->
-    <link rel="canonical" href="./">
-    
-    <link rel="stylesheet" href="./CSS/main.css">
-    <!-- 引入现代字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
-    <!-- 引入代码高亮 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
-    <!-- 引入图标 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 网站图标 -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <title>日语单词学习 - 仪表盘</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <a href="./" class="logo">Tech<span style="color: var(--accent-color)">Blog</span></a>
-            <button class="menu-toggle" id="menu-toggle" aria-label="打开菜单">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav-links" id="nav-links">
-                <a href="./" class="active"><i class="fas fa-home"></i> 首页</a>
-                <a href="./archive.html"><i class="fas fa-archive"></i> 归档</a>
-                <a href="./about.html"><i class="fas fa-user"></i> 关于</a>
-                <button id="theme-toggle" aria-label="切换主题">🌓</button>
-            </nav>
-        </div>
+     <!-- 顶部一行区域 - 所有模块在同一行 -->
+    <header class="top-full-row">
+        <!-- 1. 日语单词学习模块 -->
+        <section class="main-title-module">
+            <h1 class="main-title-item green">日语单词学习</h1>
+        </section>
+
+        <!-- 2. 学习概览模块（标题左侧+2列2行） -->
+        <section class="study-overview-module">
+            <aside class="module-sidebar-title">学习概览</aside>
+            <div class="module-content">
+                <article class="content-item">
+                    <div class="overview-stat-value" id="totalWords">0</div>
+                    <div class="overview-stat-label">总单词数</div>
+                </article>
+                <article class="content-item">
+                    <div class="overview-stat-value" id="studyDays">0</div>
+                    <div class="overview-stat-label">学习天数</div>
+                </article>
+                <article class="content-item">
+                    <div class="overview-stat-value" id="studiedWords">0</div>
+                    <div class="overview-stat-label">已学单词</div>
+                </article>
+                <article class="content-item">
+                    <div class="overview-stat-value" id="studyStreak">0</div>
+                    <div class="overview-stat-label">连续学习</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. 最近学习 + 记忆曲线任务模块 -->
+        <section class="top-aux-module">
+            <div class="aux-item blue">
+                <button class="refresh-btn" id="refreshDashboard">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>刷新</span>
+                </button>
+            </div>
+            <div class="aux-item pink">
+                <button class="generate-btn" id="generateMemoryTasksBtn">
+                    <i class="fas fa-brain"></i>
+                    <span>生成任务</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 4. 学习统计模块（标题左侧+2列2行） -->
+        <section class="study-stat-module">
+            <aside class="module-sidebar-title">学习统计</aside>
+            <div class="module-content">
+                <article class="content-item">
+                    <div class="overview-stat-value" id="favoriteCount">0</div>
+                    <div class="overview-stat-label">已收藏</div>
+                </article>
+                <article class="content-item">
+                    <div class="overview-stat-value" id="studyCount">0</div>
+                    <div class="overview-stat-label">学习次数</div>
+                </article>
+                <article class="content-item">
+                    <div class="overview-stat-value" id="recentCount">0</div>
+                    <div class="overview-stat-label">最近学习</div>
+                </article>
+                <article class="content-item">
+                    <div class="overview-stat-value" id="avgScore">0</div>
+                    <div class="overview-stat-label">平均得分</div>
+                </article>
+            </div>
+        </section>
     </header>
 
-    <div class="hero section">
-        <div class="container">
-            <h1>探索技术的奇妙世界</h1>
-            <p class="lead">分享编程知识、开发经验和技术见解</p>
-        </div>
-    </div>
+    <!-- 主体区域 -->
+    <main class="main-area">
+        <!-- 左侧列 -->
+        <aside class="left-col">
+            <nav class="left-module module-container">
+                <h2 class="module-title green">快速访问</h2>
+                <ul class="quick-access-list">
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="noun">
+                            <i class="fas fa-book"></i>
+                            <span>名词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="verb">
+                            <i class="fas fa-bolt"></i>
+                            <span>动词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="adjective">
+                            <i class="fas fa-star"></i>
+                            <span>形容词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="adjectival-verb">
+                            <i class="fas fa-bullseye"></i>
+                            <span>形容动词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="adverb">
+                            <i class="fas fa-wind"></i>
+                            <span>副词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="pronoun">
+                            <i class="fas fa-user"></i>
+                            <span>代词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="loanword">
+                            <i class="fas fa-globe"></i>
+                            <span>外来语</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="other-word">
+                            <i class="fas fa-tools"></i>
+                            <span>其他词</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="quick-access-btn module-link" data-module="fixed-collocations">
+                            <i class="fas fa-link"></i>
+                            <span>固定搭配</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <section class="left-module module-container">
+                <h2 class="module-title green">快捷操作</h2>
+                <ul class="action-buttons-list">
+                    <li>
+                        <button class="action-button" id="viewFavorites">
+                            <i class="fas fa-heart"></i>
+                            <span>查看收藏</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="action-button" id="viewRecent">
+                            <i class="fas fa-clock"></i>
+                            <span>最近学习</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="action-button module-link" data-module="study-plan">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>学习计划</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="action-button module-link" data-module="word-selector">
+                            <i class="fas fa-list-check"></i>
+                            <span>单词选择</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="action-button" id="clearData">
+                            <i class="fas fa-trash"></i>
+                            <span>清空数据</span>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </aside>
 
-    <main class="container section">
-        <h2 class="section-title">最新文章</h2>
-        
-        <!-- 文章列表 -->
-        <div class="posts-grid">
-            <article class="post-card">
-                <time datetime="2024-03-15">2024.03.15</time>
-                <h2><a href="./posts/hello-world.html">Hello World</a></h2>
-                <div class="post-excerpt">
-                    这是我的第一篇技术博客，分享我对编程和技术的热爱与见解...
+        <!-- 中间动态区域 -->
+        <section class="middle-col pink">
+            <div class="module-content-display" id="moduleContentDisplay">
+                <!-- 模块内容将通过JavaScript动态生成 -->
+            </div>
+        </section>
+
+        <!-- 右侧列 -->
+        <aside class="right-col">
+            <section class="right-module module-container">
+                <h2 class="module-title green">模块学习进度</h2>
+                <div class="module-progress-list" id="moduleProgressList">
+                    <!-- 模块进度将通过JavaScript动态生成 -->
                 </div>
-                <div class="post-tags">
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Web开发</span>
+            </section>
+            <section class="right-module module-container">
+                <h2 class="module-title green">学习计划</h2>
+                <div class="plan-info">
+                    <div class="plan-info-item">
+                        <span class="plan-info-label">当前计划</span>
+                        <span class="plan-info-value" id="currentPlanName">未设置</span>
+                    </div>
+                    <div class="plan-info-item">
+                        <span class="plan-info-label">开始日期</span>
+                        <span class="plan-info-value" id="planStartDate">-</span>
+                    </div>
+                    <div class="plan-info-item">
+                        <span class="plan-info-label">结束日期</span>
+                        <span class="plan-info-value" id="planEndDate">-</span>
+                    </div>
+                    <div class="plan-info-item">
+                        <span class="plan-info-label">剩余天数</span>
+                        <span class="plan-info-value" id="planRemainingDays">0</span>
+                    </div>
                 </div>
-            </article>
-            
-            <article class="post-card">
-                <time datetime="2024-03-20">2024.03.20</time>
-                <h2><a href="#">现代CSS技巧与最佳实践</a></h2>
-                <div class="post-excerpt">
-                    探索现代CSS的强大功能，包括Grid布局、Flexbox和CSS变量等...
+                <div class="plan-progress">
+                    <div class="plan-progress-bar">
+                        <div class="plan-progress-fill" id="planProgressFill" style="width: 0%"></div>
+                    </div>
+                    <div class="plan-progress-text" id="planProgressText">0%</div>
                 </div>
-                <div class="post-tags">
-                    <span class="tag">CSS</span>
-                    <span class="tag">前端</span>
-                </div>
-            </article>
-            
-            <article class="post-card">
-                <time datetime="2024-03-25">2024.03.25</time>
-                <h2><a href="#">React性能优化指南</a></h2>
-                <div class="post-excerpt">
-                    学习如何优化React应用性能，避免常见陷阱，提升用户体验...
-                </div>
-                <div class="post-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">性能优化</span>
-                </div>
-            </article>
-        </div>
-        
-        <div class="view-more">
-            <a href="./archive.html" class="btn">查看更多文章 <i class="fas fa-arrow-right"></i></a>
-        </div>
+            </section>
+            <div class="theme-toggle-container">
+                <button class="theme-toggle-btn red-btn" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                    <span>深色模式</span>
+                </button>
+            </div>
+        </aside>
     </main>
-    
-    <section class="newsletter section">
-        <div class="container">
-            <h2>订阅更新</h2>
-            <p>获取最新文章和技术资讯直接发送到您的邮箱</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="您的邮箱地址" required>
-                <button type="submit" class="btn">订阅 <i class="fas fa-paper-plane"></i></button>
-            </form>
-        </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Tech<span style="color: var(--accent-color)">Blog</span></h3>
-                    <p>分享编程知识和技术见解的个人博客</p>
-                </div>
-                <div class="footer-links">
-                    <a href="./"><i class="fas fa-home"></i> 首页</a>
-                    <a href="./archive.html"><i class="fas fa-archive"></i> 归档</a>
-                    <a href="./about.html"><i class="fas fa-user"></i> 关于</a>
-                </div>
-                <div class="social-links">
-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="copyright">
-                &copy; 2024 TechBlog. 保留所有权利.
-            </div>
-        </div>
-    </footer>
-
-    <script src="./js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script src="shared/common.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

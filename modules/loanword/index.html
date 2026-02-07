@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语外来语学习 - 统一平台</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="css/loanword_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1 class="title">🌏 日语外来语学习</h1>
+            <p class="subtitle">外来语 | 来源于外语的日语词汇</p>
+        </header>
+
+        <div class="control-panel">
+            <div class="filter-section">
+                <span class="filter-label">重要程度：</span>
+                <div class="filter-buttons" id="importanceFilters">
+                    <button class="filter-btn active" data-importance="all">全部</button>
+                    <button class="filter-btn" data-importance="☆">☆重要</button>
+                    <button class="filter-btn" data-importance="□">□一般</button>
+                </div>
+            </div>
+
+            <div class="random-section">
+                <button class="random-btn" id="randomBtn">
+                    <i class="fas fa-random"></i> 随机抽查
+                </button>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer"></div>
+        <div class="loading" id="loading"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>
+    </div>
+
+    <script src="../../shared/common.js"></script>
+    <script src="../../shared/components.js"></script>
+    <script src="js/loanword_module.js"></script>
+</body>
+</html>

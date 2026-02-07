@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日语名词学习 - 统一平台</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="css/noun_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+
+
+        <!-- 页面头部 -->
+        <header class="header">
+            <h1 class="title">📖 日语名词学习</h1>
+            <p class="subtitle">N5/N4名词 | 轻松掌握基础词汇</p>
+        </header>
+
+        <!-- 筛选和控制区域 -->
+        <div class="control-panel">
+            <!-- 等级筛选 -->
+            <div class="filter-section">
+                <span class="filter-label">等级筛选：</span>
+                <div class="filter-buttons" id="levelFilters">
+                    <button class="filter-btn active" data-level="all">全部</button>
+                    <button class="filter-btn" data-level="N5">N5</button>
+                    <button class="filter-btn" data-level="N4">N4</button>
+                </div>
+            </div>
+
+            <!-- 汉字数量筛选 -->
+            <div class="filter-section">
+                <span class="filter-label">汉字数量：</span>
+                <div class="filter-buttons" id="charCountFilters">
+                    <button class="filter-btn active" data-char-count="all">全部</button>
+                    <button class="filter-btn" data-char-count="1">单汉字</button>
+                    <button class="filter-btn" data-char-count="2">双汉字</button>
+                    <button class="filter-btn" data-char-count="3+">多汉字</button>
+                    <button class="filter-btn" data-char-count="other">其他</button>
+                </div>
+            </div>
+
+            <!-- 随机抽查按钮 -->
+            <div class="random-section">
+                <button class="random-btn" id="randomBtn">
+                    <i class="fas fa-random"></i> 随机抽查
+                </button>
+            </div>
+        </div>
+
+        <!-- 单词卡片容器 -->
+        <div class="cards-container" id="cardsContainer">
+            <!-- 单词卡片将通过JavaScript动态生成 -->
+        </div>
+
+        <!-- 加载提示 -->
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i> 加载中...
+        </div>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="../../shared/common.js"></script>
+    <script src="../../shared/components.js"></script>
+    <script src="js/noun_module.js"></script>
+</body>
+</html>
