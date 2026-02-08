@@ -1,0 +1,45 @@
+# GitHub Pages 网站配置
+# 确保在 GitHub Pages 上正确部署和加载资源
+
+# 网站基本信息
+title: 日语单词学习
+description: 专业的日语词汇学习平台
+author: abby-qi
+
+# 网站 URL（部署后可以修改）
+baseurl: ""
+url: "https://abby-qi.github.io"
+
+# GitHub Pages 设置
+markdown: kramdown
+highlighter: rouge
+
+# 插件（可选）
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 排除的文件和目录
+exclude:
+  - archive/
+  - docs/
+  - start.bat
+  - start.sh
+  - README.md
+  - LICENSE
+
+# 包含的文件
+include:
+  - _redirects
+
+# 永久链接设置
+permalink: pretty
+
+# 编码
+encoding: UTF-8
+
+# 未来文章日期
+future: true
+
+# 站点地图设置
+timezone: Asia/Shanghai

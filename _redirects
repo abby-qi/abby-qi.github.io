@@ -1,0 +1,21 @@
+# GitHub Pages 重定向规则
+# 确保所有请求都能正确路由到 index.html
+
+# 主页
+/ /index.html 200
+
+# 模块页面
+/modules/noun /modules/noun/index.html 200
+/modules/verb /modules/verb/index.html 200
+/modules/adjective /modules/adjective/index.html 200
+/modules/adjectival-verb /modules/adjectival-verb/index.html 200
+/modules/adverb /modules/adverb/index.html 200
+/modules/pronoun /modules/pronoun/index.html 200
+/modules/loanword /modules/loanword/index.html 200
+/modules/other-word /modules/other-word/index.html 200
+/modules/fixed-collocations /modules/fixed-collocations/index.html 200
+
+# 功能页面
+/pages/study-plan /pages/study-plan.html 200
+/pages/word-selector /pages/word-selector.html 200
+/pages/generated-words /pages/generated-words.html 200

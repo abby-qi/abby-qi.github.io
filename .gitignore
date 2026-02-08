@@ -1,0 +1,21 @@
+# Node modules (如果将来添加)
+node_modules/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build files (如果将来添加)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.log
