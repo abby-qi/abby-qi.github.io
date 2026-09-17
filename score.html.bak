@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生成绩管理系统</title>
+    <link rel="stylesheet" href="score.css?v=20260917b">
+</head>
+<body>
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">规章制度</h2>
+            <div id="sms-rules-container" class="sms-content-container"></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">总体统计</h2>
+            <div class="stat-time" id="sms-stat-time"></div>
+            <div class="gpa-display sms-protected" data-permission="read">
+                <div class="gpa-content">
+                    <div class="gpa-label">总GPA</div>
+                    <div class="gpa-value" id="sms-total-gpa">--</div>
+                    <div class="gpa-scale">五分制</div>
+                </div>
+            </div>
+            <div id="sms-summary-container" class="sms-content-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="公共基础课">
+            <h2 class="section-title">公共基础课</h2>
+            <div id="sms-course-public-basic" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="专业基础课">
+            <h2 class="section-title">专业基础课</h2>
+            <div id="sms-course-major-basic" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="专业课">
+            <h2 class="section-title">专业课</h2>
+            <div id="sms-course-major" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="综合实践课">
+            <h2 class="section-title">综合实践课</h2>
+            <div id="sms-course-practice" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="跨专业交叉课">
+            <h2 class="section-title">跨专业交叉课</h2>
+            <div class="section-note sms-section-note" id="sms-note-cross-major"></div>
+            <div id="sms-course-cross-major" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="专业选修课">
+            <h2 class="section-title">专业选修课</h2>
+            <div class="section-note sms-section-note" id="sms-note-major-elective"></div>
+            <div id="sms-course-major-elective" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+
+        <div class="section sms-course-section" data-category="公共选修课">
+            <h2 class="section-title">公共选修课</h2>
+            <div class="section-note sms-section-note" id="sms-note-public-elective"></div>
+            <div id="sms-course-public-elective" class="sms-course-container sms-protected" data-permission="read"></div>
+        </div>
+    </div>
+
+    <script src="score.js?v=20260917b"></script>
+</body>
+</html>
